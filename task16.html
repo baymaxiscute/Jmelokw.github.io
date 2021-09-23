@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>SportsFun</title>
+	<link rel="icon"href="Images/sportsimage.jpg"type="image/jpg" sizes="16x16">
+	<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family" rel="stylesheet">
+</head>
+<body>
+	<style>
+	#txt{
+		font-size: 6em;
+        word-wrap: break-word;
+	}
+	a{
+		color: red;
+	}
+	a:hover{
+		color: black;
+		background-color: chocolate;
+	}
+	html{
+		background-color: ivory;
+		text-align: center;
+		padding-top: 150px;
+		color: blanchedalmond;
+		font-family: font-family: 'Birthstone', cursive;
+	}
+</style>
+<div id="clock"></div>
+<script>
+	function startTime(){
+		var today=new Date();
+		var d=today.getDate();
+		var n=today.getMonth()+1;
+		var y=today.getFullYear();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+	m=checkTime(m);
+	s=checkTime(s);
+	h=checkTime(h);
+	d=checkTime(d);
+	n=checkTime(n);
+	document.getElementById('txt').innerHTML=d+"/"+n+"/"+y+"&nbsp"+h+":"+m+":"+s;
+	var t=setTimeout(startTime,500);
+}
+function checkTime(i){
+	if(i<10) {i="0"+i};
+	return i;
+}
+</script>
+<body onload="startTime()">
+	<div id="txt"></div>
+	<p>HK Time (GMT+08)<a href="https://www.timeanddate.com/time/map/"> Click Me To Know More About Time Zones!</a></p>
+</body>
+</html>
+<a href="task15.html">Back</a>
+<a href="task17.html">Next</a>
