@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+	<img src="Images/sportypicture.jpg"alt="Image"Width="50%">
+	<style type="text/css">
+	#left{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+        }
+
+    #right{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+        } 
+        a{
+                padding: 20px;
+                background-color: #f9acbd;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px ;
+                color: #90f4c4;
+                text-decoration: bold;
+                font-family: 'Scheherazade New', serif;
+        }
+	html{
+		text-align: center;
+		padding-top: 20px;
+		font-family: 'Scheherazade New', serif;
+		background-color: #bdd8f9;
+		color: #5cb3c9;
+	}
+	button{
+		background-color: #a04eed;
+		font-family: 'Scheherazade New', serif;
+		text-decoration: none;
+		display: inline-block;
+		border: none;
+		border-radius: 10px;
+		padding: 25px;
+		color: #e04cca;
+		font-size: 25px;
+		outline: none;
+	}
+	button:hover{
+		background-color: #e893ed;
+		color: #f7bbe1;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<button onclick="findSport();" type="randomSport">Click This Button To See Which Random Sport You Should Try!</button>
+		<br>
+		(You do not need to type in the textbox😊)
+		<br>
+		<input name="randomSport" id="randomSport">
+		<br><br>
+	</div>
+	<script>
+		const sports=["Trampoline", "Golf", "Wakeboarding", "Fishing", "Bowling", "Rollerskating"];
+		function findSport(){
+			let randomIndex=Math.floor(Math.random()*sports.length);
+			document.getElementById("randomSport").setAttribute("value",sports[randomIndex]);
+		}
+	</script>
+<a href="task18.html">Back</a>
+<a href="task20.html">Next</a>
+</body>
+</html>
