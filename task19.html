@@ -47,22 +47,37 @@
 		background-color: #e893ed;
 		color: #f7bbe1;
 	}
+	#randomSport{
+		font-family: 'Scheherazade New', serif;
+		text-decoration: underline;
+		background-color: #bb02cc;
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: inline-block;
+		border: none;
+		border-radius: 10px;
+		color: #5fd3d3;
+		font-size: 25px;
+		outline: none;
+	}
 </style>
 </head>
 <body>
 	<div>
-		<button onclick="findSport();" type="randomSport">Click This Button To See Which Random Sport You Should Try!</button>
+		<button onclick="findSport();" type="randomSport">How About You Give This Sport A Try?</button>
 		<br>
-		(You do not need to type in the textbox😊)
-		<br>
-		<input name="randomSport" id="randomSport">
+		<p name="randomSport" id="randomSport"></p>
 		<br><br>
 	</div>
 	<script>
 		const sports=["Trampoline", "Golf", "Wakeboarding", "Fishing", "Bowling", "Rollerskating"];
+		let randomIndex=Math.floor(Math.random()*sports.length);
+			document.getElementById("randomSport").innerHTML =("value",sports[randomIndex]);
 		function findSport(){
 			let randomIndex=Math.floor(Math.random()*sports.length);
-			document.getElementById("randomSport").setAttribute("value",sports[randomIndex]);
+			document.getElementById("randomSport").innerHTML =("value",sports[randomIndex]);
 		}
 	</script>
 <a href="task18.html">Back</a>
