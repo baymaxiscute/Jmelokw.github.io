@@ -2,33 +2,17 @@
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
-
 //Define vars to hold "display" value
 let displaySeconds = 0;
 let displayMinutes = 0;
 let displayHours = 0;
-
-//Define var to hold setInterval() function
-let interval = null;
-
 //Define var to hold stopwatch status
 let status = "stopped";
-
 //Stopwatch function (logic to determine when to increment next value, etc.)
 function stopWatch(){
-
-    seconds++;
-
-   
-
-   
-    //Display updated time values to user
-    document.getElementById("display").innerHTML =Math.floor(Math.random()*100);
+//Display updated time values to user
+    document.getElementById("display").innerHTML =Math.floor(Math.random()*1001);
 }
-
-
-
-
 function startStop(){
 
     if(status === "stopped"){
