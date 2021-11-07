@@ -1,11 +1,8 @@
 .buttons{
     text-align: center;
-
 }
-
 .html{
-	text-align: center;
-	
+	text-align: center;	
 }
 button{
 		text-decoration: none;
@@ -22,15 +19,22 @@ button{
 		background-color: #009eff;
 		margin-top: 50px;
 	}
-
 html{
 	text-align: center;
 	background-color: #FFD000;
 	padding: 20px;
-	font-size: 60px;
-	font-family: 'Caveat', cursive;
+	font-size: 30px;
+	font-family: 'Tourney', cursive;
 }
-
 button:hover{
 	background-color: #e100ff;
+}
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#display{
+	height: 30px;
 }
