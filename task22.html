@@ -11,15 +11,19 @@
 </head>
 <body>
 <div class="container">
-	<img src="Images/sportsgif.gif"alt="Image"width="70%"><br><br>
+	<img src="Images/sportsgif.gif"alt="Image"width="350px"><br><br>
 	<div id="display">
 		Let's Go!
 	</div>
 	<div id="buttons">
-		<button id="startStop" onclick="startStop()">Click Me To Generate A Random Sport!</button>
-		<br><br><a href="task20.html">Back</a>
-    <a href="task22.html">Next</a>
+		<button id="startStop" onclick="startStop(); playAudio();">Click Me To Generate A Random Sport!</button>
+		<br><br><a href="task23.html">Back</a>
+    <a href="task24.html">Next</a>
 	</div>
 </div>
+<audio loop id="myAudio">
+    <source id="myAudio" src="Music/Ukulele.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
 </body>
 </html>

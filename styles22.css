@@ -22,7 +22,7 @@ button{
 html{
 	text-align: center;
 	background-color: #FFD000;
-	padding: 20px;
+	padding-top: 20px;
 	font-size: 30px;
 	font-family: 'Tourney', cursive;
 }
@@ -36,5 +36,5 @@ button:hover{
 	transform: translate(-50%, -50%);
 }
 #display{
-	height: 30px;
+	height: 50px;
 }

@@ -9,11 +9,10 @@ function stopWatch(){
 function startStop(){
 
     if(status === "stopped"){
-        
+
         interval = window.setInterval(stopWatch, 0);
         document.getElementById("startStop").innerHTML = "Stop Generating";
         status = "started";
-
     }
     else{
 
@@ -23,4 +22,8 @@ function startStop(){
 
     }
 
-}
+} 
+function playAudio() { 
+        var a = document.getElementById("myAudio");
+            a.play();
+        }
