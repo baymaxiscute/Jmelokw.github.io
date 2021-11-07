@@ -1,0 +1,36 @@
+.buttons{
+    text-align: center;
+
+}
+
+.html{
+	text-align: center;
+	
+}
+button{
+		text-decoration: none;
+		font-family: 'Permanent Marker', cursive;
+		display: inline-block;
+		border: none;
+		border-radius: 10px;
+		padding: 10px;
+		color: #6100ff;
+		font-size: 20px;
+		width: 200px;
+		height: 100px;
+		outline: none;
+		background-color: #009eff;
+		margin-top: 50px;
+	}
+
+html{
+	text-align: center;
+	background-color: #FFD000;
+	padding: 20px;
+	font-size: 60px;
+	font-family: 'Caveat', cursive;
+}
+
+button:hover{
+	background-color: #e100ff;
+}
