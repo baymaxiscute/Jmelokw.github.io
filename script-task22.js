@@ -12,18 +12,22 @@ function startStop(){
 
         interval = window.setInterval(stopWatch, 0);
         document.getElementById("startStop").innerHTML = "Stop Generating";
+        playAudio();
         status = "started";
     }
     else{
 
         window.clearInterval(interval);
         document.getElementById("startStop").innerHTML = "Start Again";
+        pauseAudio();
         status = "stopped";
-
     }
-
 } 
 function playAudio() { 
         var a = document.getElementById("myAudio");
             a.play();
+        }
+function pauseAudio() { 
+        var a = document.getElementById("myAudio");
+            a.pause();
         }
