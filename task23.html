@@ -50,6 +50,18 @@
 }
 document.getElementById("text").innerHTML = "Today Is ";
   document.getElementById("day").innerHTML = day;
+const d = new Date();
+  month = d.getMonth();
+  date = d.getDate();
+  if (month == 11 && date == 24){
+  	 document.getElementById("day").innerHTML = "Christmas Eve!🎄";
+  	}
+
+  if (month == 11 && date == 25){
+  	 document.getElementById("day").innerHTML = "Christmas Day!🎁";
+  	 
+
+  }
 </script>
 <br><a href="task21.html">Back</a>
 <a href="task22.html">Next</a>
