@@ -1,1 +1,68 @@
 <!Doctype html>
+	<html>
+	<head>
+		<title>Animation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		#container{
+			width: 400px;
+			height: 400px;
+			position: relative;
+			background: #b4d1f7;
+			left: 50%;
+			margin-left: -200px;
+			top: 50%;
+			margin-top: 60px;
+		}
+		#animate{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			background-color: #fcf8ae;
+			border-radius: 100000000000px;
+		}
+		html{
+			text-align: center;
+			padding-top: 20px;
+		}
+		button{
+			background-color: #f2a7ed;
+			border-radius: 10px;
+			height: 75px;
+			outline: none;
+			color: #d030d3;
+			width: 100px;
+			text-decoration: none;
+			border: none;
+		}
+		button:hover{
+			background-color: #9ef5ff;
+		}
+	}
+	</style>
+</head>
+	<body>
+		<p><button onclick="BluegulueMyMove()">CLICK ME!🤩</button></p>
+		<div id="container">
+			<div id="animate"></div>
+		</div>
+		<script>
+			function BluegulueMyMove() {
+				var elem = document.getElementById("animate");
+				var pos = 0;
+				var id = setInterval(frame, 0);
+				function frame() {
+					if (pos == 350) {
+						clearInterval(id);
+					} else {
+						pos++;
+						elem.style.top = pos + "px";
+						elem.style.left = pos + "px";
+					}
+				}
+			}
+		</script>
+	<br><br><a href="task22.html">Back</a>
+	<a href="task25.html">Next</a>
+	</body>
+	</html>
