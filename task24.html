@@ -43,7 +43,7 @@
 	</style>
 </head>
 	<body>
-		<p><button onclick="BluegulueMyMove()">CLICK ME!🤩</button></p>
+		<p><button onclick="BluegulueMyMove()">CLICK ME (x2) !🤩</button></p>
 		<div id="container">
 			<div id="animate"></div>
 		</div>
@@ -55,13 +55,16 @@
 				function frame() {
 					if (pos == 350) {
 						clearInterval(id);
+						elem.style.left = pos + "px";
+						elem.style.bottom = pos + "px";
 					} else {
 						pos++;
+						elem.style.right = pos + "px";
 						elem.style.top = pos + "px";
-						elem.style.left = pos + "px";
-					}
+                }
+            }
+
 				}
-			}
 		</script>
 	<br><br><a href="task22.html">Back</a>
 	<a href="task25.html">Next</a>
