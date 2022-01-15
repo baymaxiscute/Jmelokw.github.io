@@ -17,12 +17,6 @@
 			position: absolute;
 			background-color: #fcf8ae;
 		}
-		#animate2haha {
-			width: 50px;
-			height: 50px;
-			position: absolute;
-			background-color: #f998bc;
-		}
 		html {
 			text-align: center;
 			padding-top: 20px;
@@ -48,21 +42,16 @@
 		<p><button onclick="myMove()">CLICK ME!🤩</button></p>
 		<div id="container">
 			<div id="animate"></div>
-			<div id="animate2haha"></div></div>
+			</div>
 		<script>
 			var id = null;
 			function myMove() {
 				var elem = document.getElementById("animate");
-				var elem2 = document.getElementById("animate2haha") 
 				var time = 0;
-				var time2 = 0;
 				var pos = 0;
 				var pos1 = 0;
-				var pos2 = 0;
-				var pos3 = 0;
-				clearInterval(id);
+			    clearInterval(id);
 				id = setInterval(frame, 1);
-				id = setInterval(frame2, 10);
 				function frame() {
 					time++;
 					if (time < 350) {
@@ -84,26 +73,8 @@
                     	else
                     		time=0;
                     }     
-					function frame2() {
-						time2++;
-						if (time2 < 175) {
-							pos3++;
-							elem2.style.top = pos3 + 'px';
-						}
-						
-						else if (time2 < 350) {
-							pos3++;
-							elem2.style.left = pos3 + 'px';
-						}
-						else if (time2 < 700) {
-							pos3--;
-							elem2.style.left = pos3 + 'px';
-						}
-						else
-							time2 = 0;
-					}  
                 }
-		</script>
+                </script>
 
 	<br><br><a href="task22.html">Back</a>
 	<a href="task25.html">Next</a>
