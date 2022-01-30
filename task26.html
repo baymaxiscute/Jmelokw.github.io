@@ -1,20 +1,29 @@
 <!Doctype html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
 		<style>
-		#back {
+#back {
   position: absolute;
   top: 50%;
   left: 0px;
   font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
 }
 #next {
   position: absolute;
   top: 50%;
   right: 0px;
   font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+#MrPenguin{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 a{
-  padding: 100% 10px 100% 10px;
+  padding: 100px 10px 100px 10px;
   background-color: slateblue;
   transform: translate(0%, -50%);
   color: white;
@@ -27,15 +36,12 @@ a:hover {
 			background-color:#9bfffa;
 			text-align: center;
 			font-size: 50px;
-			padding: 70px;
 		}
-
 	</style>
 </head>
 	<body>
-		Meet: Finley the Penguin!
-	<img src="Images/PENGUIN GIF-FINAL DRAWING THING.gif"alt="Image"Width="60%">
-	
+		<div id="MrPenguin">Meet: Finley the Penguin!
+	<img src="Images/PENGUIN GIF-FINAL DRAWING THING.gif"alt="Image"Width="400px"></div>
 	<a id="back" href="task25revised.html">Back</a>
   <a id="next" href="task27.html">Next</a>
 </body>
