@@ -1,0 +1,65 @@
+<!Doctype html>
+	<html>
+	<head>
+	    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<img src="Images/FoxieTHing.gif" alt="Image"Width="400px">
+	<style>
+	#back {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+a{
+  padding: 100px 10px 100px 10px;
+  background-color: slateblue;
+  transform: translate(0%, -50%);
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  background-color: dodgerblue;
+}
+	p{
+		font-family: 'Road Rage', cursive;
+		font-size: 50px;
+	}
+	html:hover{
+		background-color: #ccddff;
+	}
+	html{
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 50px;
+		color: #000659;
+		background-color: #fceb88;
+	}
+	#demo{
+		outline-color: none;
+	}
+</style>
+<p>Type something in the box below!</p>
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+<script>
+	function keydownFunction() {
+		document.getElementById("demo").style.backgroundColor = "#ffedbc";
+	}
+	function keyupFunction() {
+		document.getElementById("demo").style.backgroundColor = "#ffccd3";
+	}
+	</script>
+	</body>
+<a id="back" href="task26.html">Back</a>
+  <a id="next" href="task28.html">Next</a>
+	
+	</html>
