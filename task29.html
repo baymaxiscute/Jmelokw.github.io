@@ -62,10 +62,13 @@
 	<p>Click this button to know how big your screen is!</p>
 	<button onclick="myFunction()">Try Me!</button>
 	<p id="demo"></p>
+	<p id="demo1"></p>
 	<script>
 		function myFunction() {
 			var x ="Total Width: " + screen.width + "px";
 			document.getElementById("demo").innerHTML = x;
+			var x ="Total Height: " + screen.height + "px";
+			document.getElementById("demo1").innerHTML = x;
 		}
 	</script>
 	<a id="back" href="task28.html">Back</a>
