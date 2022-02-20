@@ -1,0 +1,74 @@
+<!Doctype html>
+	<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<style>
+		html{
+			background-image: url("Images/canvas.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: #1ebfbf;
+			font-size: 50px;
+			font-family: 'Fredoka One', cursive;
+			text-align: center;
+			padding-top: 100px;
+			margin: 100px;
+		}
+		a{
+			padding: 200px 10px 200px 10px;
+			background-color: #fff2bc;
+			transform: translate(0%, -50%);
+			color: #000000;
+			text-decoration: none;
+		}
+		
+#back {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+		a:hover {
+			background-color: #ccccff;
+		}
+		p{
+			padding-left: 10px;
+			padding-right: 10px;
+			background-color: #f9f5b3;
+		}
+		button{
+			height: 100px;
+			width: 150px;
+			background-color: #f9f5b3;
+			border: none;
+			color: #8688e8;
+			font-family: 'Fredoka One', cursive;
+			font-size: 30px;
+		}
+		button:hover{
+			background-color: #fcd574;
+		}
+	</style>
+	<p>Click this button to know how big your screen is!</p>
+	<button onclick="myFunction()">Try Me!</button>
+	<p id="demo"></p>
+	<script>
+		function myFunction() {
+			var x ="Total Width: " + screen.width + "px";
+			document.getElementById("demo").innerHTML = x;
+		}
+	</script>
+	<a id="back" href="task28.html">Back</a>
+	<a id="next" href="task30.html">Next</a>
+</body>
+</html>
