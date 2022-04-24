@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Clicker Game!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	body{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		margin: 0px;
+	}
+	button{
+		height: 100%;
+		width: 100%;
+		font-size: 100px;
+		color: white;
+		border-radius: 0px;
+		border-style: none;
+		outline: none;
+		padding-top: 0px;
+		background-color: #9be8f2;
+	}
+	#next,#back{
+			padding: 200px 10px 200px 10px;
+			background-color: #fff2bc;
+			transform: translate(0%, -50%);
+			color: #000000;
+			text-decoration: none;
+		}
+		
+#back {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+	a:hover{
+		background-color: #f4e784;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var clicks = 0;
+		function onClick(){
+			clicks += 1;
+			document.getElementById("clicks").innerHTML = clicks;
+		}
+		function random_bg_color(){
+			var x = Math.floor(Math.random() * 256);
+			var y = Math.floor(Math.random() * 256);
+			var z = Math.floor(Math.random() * 256);
+			var bgColor = "rgb(" + x + "," + y + "," + z + ")"	
+			console.log(bgColor);
+			document.getElementById("clicks").style.backgroundColor = bgColor;	
+		}
+	</script>
+	<button id="clicks" type="button" onClick="onClick();random_bg_color();playAudio();">Click Me!</button>
+	<a id="back" href = "task31.html">Back</a>
+  <a id="next" href = "task33.html">Next</a>
+	</body>
+	</html>
