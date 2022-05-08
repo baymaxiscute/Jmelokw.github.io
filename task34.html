@@ -1,0 +1,140 @@
+<!Doctype html>
+	<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Are you a bookworm?</title>
+		<style>
+		html{
+			text-align: center;
+			padding-top: 100px;
+			background-color: #f5f794;
+			font-size: 20px;
+			color: #a3c5ed;
+		}
+		h1{
+			font-size: 30px;
+			font-family: 'Indie Flower', cursive;
+		}
+		p{
+			font-size: 25px;
+			text-align: center;
+			font-family: 'Indie Flower', cursive;
+		}
+		a{
+			color: #8b68e2;
+			font-family: 'Tapestry', cursive;
+			font-size: 26px;
+			text-align: top;
+		}
+          #next,#back{
+			padding: 200px 10px 200px 10px;
+			background-color: #fff2bc;
+			transform: translate(0%, -50%);
+			color: #000000;
+			text-decoration: none;
+			
+		}
+		
+#back {
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 70%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+#next, #back: hover{
+	background-color: blue;
+}
+		}
+a:hover{
+	background-color: #96f7da;
+}
+</style>
+</head>
+<body>
+<h1>Are you a bookworm (Who likes fiction)?</h1>
+<label for="myCheck">Have you read Harry Potter?</label>
+<input type="checkbox" id="myCheck" onclick="myFunction()"><br>
+<label for="myCheck">Have you read The Hunger Games?</label>
+<input type="checkbox" id="myCheck2" onClick="myFunction()"><br>
+<label for="myCheck">Do you prefer movies over books?</label>
+<input type="checkbox" id="myCheck3" onClick="myFunction()"><br>
+<label for="myCheck">Have you read Anne of Green Gables?</label>
+<input type="checkbox" id="myCheck4" onClick="myFunction()"><br>
+<label for="myCheck">Do you prefer Non-fiction books over fiction books?</label>
+<input type="checkbox" id="myCheck5" onClick="myFunction()"><br>
+<label for="myCheck">Do you prefer reading travel guides over reading blogs?</label>
+<input type="checkbox" id="myCheck6" onClick="myFunction()"><br>
+<label for="myCheck">Do you own a kindle?</label>
+<input type="checkbox" id="myCheck7" onClick="myFunction()"><br>
+<label for="myCheck">Are you in a book club?</label>
+<input type="checkbox" id="myCheck8" onClick="myFunction()"><br>
+<label for="myCheck">Do you like narrative writing?</label>
+<input type="checkbox" id="myCheck9" onClick="myFunction()"><br>
+<label for="myCheck">Do you usually read books with more than 500 pages?</label>
+<input type="checkbox" id="myCheck10" onClick="myFunction()"><br>
+<p>Your score is: </p><p id="text"></p>
+<script>
+	function myFunction() {
+		var checkBox = document.getElementById("myCheck");
+		var checkBox2 = document.getElementById("myCheck2");
+		var checkBox3 = document.getElementById("myCheck3");
+		var checkBox4 = document.getElementById("myCheck4");
+		var checkBox5 = document.getElementById("myCheck5");
+		var checkBox6 = document.getElementById("myCheck6");
+		var checkBox7 = document.getElementById("myCheck7");
+		var checkBox8 = document.getElementById("myCheck8");
+		var checkBox9 = document.getElementById("myCheck9");
+		var checkBox10 = document.getElementById("myCheck10");
+
+		 var text = document.getElementById("text");
+ var score = 0;
+		if (checkBox.checked == true){
+			score = score +5;
+		}	
+	if (checkBox2.checked == true){
+		score = score +5;
+	}	
+	if (checkBox3.checked == true){
+		score = score -5;
+	}
+	if (checkBox4.checked == true){
+		score = score +5;
+	}
+	if (checkBox5.checked == true){
+		score = score -5;
+	}
+	if (checkBox6.checked == true){
+		score = score -5;
+	}
+	if (checkBox7.checked == true){
+		score = score +5;
+	}
+	if (checkBox8.checked == true){
+		score = score +5;
+	}
+	if (checkBox9.checked == true){
+		score = score +5;
+	}
+	if (checkBox10.checked == true){
+		score = score -5;
+	}
+	text.innerHTML = score;
+}
+</script>
+<p>If you have 25-30 marks, you are a SERIOUS bookworm.</p>
+<p>If you have 15-24 marks, you are an average reader.</p>
+<p>If you have 1-14 marks, you are not really a bookworm. Get Reading!!</p>
+<a id="back" href="task33.html">Back</a>
+<a id="next" href="task35.html">Next</a>
+</body>
+</html>
