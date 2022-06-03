@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        background-color: lightblue;
+        margin: 0px;
+    }
+    .buttons{
+        top: 0%;
+        left: 0%;
+        width:100%;
+        position: absolute;
+        margin-left: 0em;
+        margin-right: 0em;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+
+    }
+
+    .baby{
+
+
+    }
+    #Head{
+        background-image: url("Images/Jelly Blobs ;)/Head-01.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        margin-top: -12em;
+        margin-left: -9em;
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        z-index: -2;
+    }
+
+
+     #Eyes{
+        background-image: url("Images/Jelly Blobs ;)/Eyes-01.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        margin-top: -12em;
+        margin-left: -9em;
+        z-index: 1;
+    }
+
+     #Mouth{
+        background-image: url("Images/Jelly Blobs ;)/Mouth-01.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        margin-top: -12em;
+        margin-left: -9em;
+        z-index: 2;
+    }
+
+    #Tentacles{
+        background-image: url("Images/Jelly Blobs ;)/Tentacles-01.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        margin-top: -12em;
+        margin-left: -9em;
+        z-index: 5;
+    }
+
+    button{
+        text-align: center;
+        width: 80px;
+        height: 50px;
+        margin: 5px;
+        border-style: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        border-radius: 30px;
+        font-family: 'Helvetica';
+        color: black;
+        background-color: #FFFFFF
+}
+    button:hover{
+        background-color: lightgray;
+}
+    button:not(:active){
+        background-color: #FFFFFF;
+}
+
+    #footer{
+        top: 90%;
+        width: 100%;
+        height: 50px;
+        background-color: #326fa8;
+        color:white;
+        border-radius: 0px;
+        margin-left: 0px;
+        position: absolute;
+        
+
+    }
+@media only screen and (max-height: 550px) {
+    #Head{
+        top: 320px;
+    }
+
+
+    #Eyes{
+        top: 320px;
+    }
+
+    #Mouth{
+        top: 320px;
+    }
+
+    #Tentacles{
+        top: 320px;
+    }
+}
+
+</style>
+<body>
+<div class="hidden">
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload(
+                "Images/Jelly Blobs ;)/Head-01.png",
+                "Images/Jelly Blobs ;)/Head-02.png",
+                "Images/Jelly Blobs ;)/Head-03.png",
+                "Images/Jelly Blobs ;)/Head-04.png",
+                "Images/Jelly Blobs ;)/Head-05.png",
+                "Images/Jelly Blobs ;)/Head-06.png",
+            )
+        //--><!]]>
+    </script>
+</div>
+
+
+    <div id="Head" class="Jelly Blobs ;)"></div>
+    <div id="Eyes" class="Jelly Blobs ;)"></div>
+    <div id="Mouth" class="Jelly Blobs ;)"></div>
+    <div id="Tentacles" class="Jelly Blobs ;)"></div>
+    <div class ="buttons">
+    <button class="button1" onClick="changehead();">Head</button>
+    <button class="button2" onClick="changeeyes();">Eyes</button>
+    <button class="button3" onClick="changemouth();">Mouth</button>
+    <button class="button4" onClick="changetentacles();">Tentacles</button>
+    </div> 
+
+
+<script>
+    var headnumber = Math.floor(Math.random() * 6)+1;
+    var eyesnumber = Math.floor(Math.random() * 6)+1;
+    var mouthnumber = Math.floor(Math.random() * 6)+1;
+    var tentaclesnumber = Math.floor(Math.random() * 6)+1;
+
+    document.getElementById("Head").style.backgroundImage = `url('Images/Jelly Blobs ;)/Head-0${headnumber}.png')`;
+    document.getElementById("Eyes").style.backgroundImage = `url('Images/Jelly Blobs ;)/Eyes-0${eyesnumber}.png')`;
+    document.getElementById("Mouth").style.backgroundImage = `url('Images/Jelly Blobs ;)/Mouth-0${mouthnumber}.png')`;
+    document.getElementById("Tentacles").style.backgroundImage = `url('Images/Jelly Blobs ;)/Tentacles-0${tentaclesnumber}.png')`;
+        
+
+    function changehead() {
+        headnumber += 1;
+        if (headnumber > 6) {
+            headnumber = 1;
+        }
+        document.getElementById("Head").style.backgroundImage = `url('Images/Jelly Blobs ;)/Head-0${headnumber}.png')`;
+        }
+
+    function changeeyes() {
+        eyesnumber += 1;
+        if (eyesnumber > 6) {
+            eyesnumber = 1;
+        }
+        document.getElementById("Eyes").style.backgroundImage = `url('Images/Jelly Blobs ;)/Eyes-0${eyesnumber}.png')`;
+        }
+
+    function changemouth() {
+        mouthnumber += 1;
+        if (mouthnumber > 6) {
+            mouthnumber = 1;
+        }
+        document.getElementById("Mouth").style.backgroundImage = `url('Images/Jelly Blobs ;)/Mouth-0${mouthnumber}.png')`;
+        } 
+
+    function changetentacles() {
+        tentaclesnumber += 1;
+        if (tentaclesnumber > 6) {
+            tentaclesnumber = 1;
+        }
+        document.getElementById("Tentacles").style.backgroundImage = `url('Images/Jelly Blobs ;)/Tentacles-0${tentaclesnumber}.png')`;
+        }
+
+</script>
+</body>
+</html>
