@@ -7,6 +7,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.1">
 </head>
 <style>
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a3ffdb;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;
+            
+        }
+        
+#back {
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 80%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+
 	html{
 		font-family: 'Courgette', cursive;
 		background-color: #ecb0f4;
@@ -113,8 +137,8 @@
 <br>
 
 
-<a href="index.html">Back</a>
+<a id="back" a href="index.html">Back</a>
 
-<a href="task01.html">Next</a>
+<a id="next" a href="task01.html">Next</a>
 
 </html>
