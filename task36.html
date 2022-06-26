@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title>Animation</title>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+    html{
+
+        background-color: #DEECFB;
+
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+   #next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a3ffdb;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;
+            
+        }
+        
+#back {
+  position: absolute;
+  top: 60%;
+  left: 0px;
+  font-size: 30px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 60%;
+  right: 0px;
+  font-size: 30px;
+  border-radius: 15px 0px 0px 15px;
+}
+  @media only screen and (max-width: 600px) {
+
+#next2,#back2{
+
+   display: block;
+
+          }        
+
+#next,#back{
+
+        display: none;
+
+      }
+
+</style>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+<img class="nature" src="Images/Panda1.png" width="70%">
+
+<img class="nature" src="Images/Panda2.png" width="70%">
+
+<img class="nature" src="Images/Panda3.png" width="70%">
+
+<img class="nature" src="Images/Panda4.png" width="70%">
+
+<img class="nature" src="Images/Panda5.png" width="70%">
+
+<img class="nature" src="Images/Panda6.png" width="70%">
+
+<script>
+w3.slideshow(".nature", 100);
+</script>
+<a id="back" href="task35.html">Back</a>  
+<a id="next" href="task37.html">Next</a> 
+</body>
+</html>
