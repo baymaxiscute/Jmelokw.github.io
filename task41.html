@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<html id="color">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colour Picker (HSL)🎨</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style>
+	html{
+		background-color: lightpink;
+		font-family: 'Poppins', sans-serif;
+		text-align: center;	
+		color:white;
+	}
+
+	h1{
+		line-height: 4px;
+		padding-top:25px;
+	}
+
+	a{
+            background-color:#AFB4E0 ;
+            color:#000000 ;
+            text-decoration: none;
+          }
+         #next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #65bec6;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+          
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+	
+	</style>
+
+<h1>Pick A Colour! 🎨</h1>
+<h2>HSL!</h2>
+
+<input type="range" id="Hue" max="360" onchange="changeColor()">
+<span id="Hh">180</span>
+<input type="range" id="Saturation" max="100%" onchange="changeColor()">
+<span id="Ss">50</span>
+<input type="range" id="Lightness" max="100%" onchange="changeColor()">
+<span id="Ll">50</span>
+
+
+
+<div id="">
+ <script type="text/javascript">                              
+
+    function changeColor() {
+        var x = document.getElementById("Hue").value ;
+        var y = document.getElementById("Saturation").value ;
+        var z = document.getElementById("Lightness").value ;
+        var bgColor = "hsl(" + x + "," + y + "%" + "," + z + "%" + ")";
+        console.log(bgColor);
+  		
+        document.getElementById("color").style.backgroundColor = bgColor;
+        document.getElementById("Hh").innerHTML = x;
+        document.getElementById("Ss").innerHTML = y;
+        document.getElementById("Ll").innerHTML = z;
+
+    }
+    </script>
+</div>       
+<h3>For A RGB Version, you can click this: <a href="jmelokw.github.io/task42">RGB Link</a></h3>
+
+</body>
+
+
+<a id="back" href="task40.html">Back</a>  
+ <a id="next" href="task42.html">Next</a> 
+</html>
