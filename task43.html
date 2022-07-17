@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Animal Age Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  html{
+    font-family: 'Edu TAS Beginner', cursive;
+    background-color: #f9ed81;
+    color:#691D6D;
+    text-align: center;
+    cursor: wait;
+  }
+
+  button{
+background-color:#BA8DFF; 
+ border: none;
+ color: white;
+ border-radius: 50px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ cursor: all-scroll;
+  }
+  h1{
+    font-size: 90px;
+    padding-top: 10px;
+  }
+  p{
+    font-size: 30px;
+  }
+
+  #billamt{
+     cursor: text;
+     background-color: white;
+
+
+  }
+
+  a{
+            padding: 100% 10px 100% 10px;
+            background-color:#AFB4E0 ;
+            transform: translate(0%, -50%);
+            color:#000000 ;
+            text-decoration: none;
+          }
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+          }
+          a:hover {
+            background-color: #FEFBFC;
+          }    
+          
+</style>
+<body>
+<div id="container">
+  <h1>Animal Age Calculator</h1>
+  <div id="calculator">
+
+
+    <form>
+      <p>How old are you?
+        <p>
+           <input id="billamt" type="text" placeholder="age">
+
+          <p>Choose An Animal:
+            <p>
+              <select id="serviceQual">
+            <option disabled selected value="0">--Please Choose--</option>
+            <option value="2.0"> Bear</option>
+            <option value="0.13"> Dog</option>
+            <option value="5.33"> Chicken</option>
+            <option value="0.3">  Hamster</option>
+            <option value="0.20"> Panda</option>
+            <option value="2.29"> Deer</option>
+            <option value="0.4">  Dophin</option>
+            <option value="0.26"> Penguin</option>
+            <option value="0.25"> Shark</option>
+            <option value="0.9">  Tiger</option>
+            <option value="0.55"> Elephant</option>
+            <option value="0.3">  Turtle</option>
+            <option value="0.07"> Rabbit</option>
+            <option value="5.71"> Fox</option>
+            <option value="4.21"> Duck</option>
+      <option value="0.20"> Monkey</option>
+            <option value="8.89"> Kangaroo</option>
+        </select>
+
+    </form>
+    
+    
+    <button type="button" id="calculate"> Calculate!</button>
+
+  </div>
+  <!--calculator end-->
+  <div id="totalTip">
+    <sup></sup><span id="tip"></span>
+    <small id="each">each</small>
+  </div>year(s)old
+  <!--totalTip end-->
+
+</div>
+<!--container end-->
+
+<script>
+  //Calculate Tip
+function calculateTip() {
+  var billAmt = document.getElementById("billamt").value;
+  var serviceQual = document.getElementById("serviceQual").value;
+
+
+  //validate input
+  if (billAmt === "" || serviceQual == 0) {
+    alert("Please Enter Your Age");
+    return;
+  }
+  
+
+  //Calculate tip
+  var total = (billAmt * serviceQual)  ;
+  //round to two decimal places
+  total = Math.round(total * 100) / 100;
+  //next line allows us to always have two digits after decimal point
+  total = total.toFixed(2);
+  //Display the tip
+  document.getElementById("totalTip").style.display = "block";
+  document.getElementById("tip").innerHTML = total;
+
+}
+
+//Hide the tip amount on load
+document.getElementById("totalTip").style.display = "none";
+document.getElementById("each").style.display = "none";
+
+//click to call function
+document.getElementById("calculate").onclick = function() {
+  calculateTip();
+
+};
+</script>
+
+
+
+ <a id="next" href="task50.html">Next</a>  
+<a id="back" href="task48.html">Back</a>
+</body>
