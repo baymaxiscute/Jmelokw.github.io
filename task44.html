@@ -1,0 +1,109 @@
+<!Doctype HTML>
+<HEAD>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <TITLE>How Fast Do You Read?</TITLE>
+<LINK REL = Stylesheet TYPE ="text/css" HREF ="st1.css">
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="script1.js"></SCRIPT>  
+<SCRIPT language = JavaScript>
+
+function calculate() {
+A = document.frmOne.txtMinutesNumber.value
+B = document.frmOne.txtSecondsNumber.value
+W = document.frmOne.txtWordsNumber.value
+A = Number(A)
+B = Number(B)
+W = Number(W)
+C = ((W/((A * 60) + (B)))*60)
+
+document.frmOne.txtFourthNumber.value = C
+}
+</SCRIPT>
+<STYLE TYPE="text/css">
+<!--
+BODY
+   {
+   padding-left: 100px;
+   padding-right: 100px;
+   background-color:#f9ec98;
+   padding-top: 20px;
+   }
+-->
+</STYLE>
+
+<body 
+ text="#000000" topmargin="10" leftmargin="5"
+ marginheight="0" marginwidth="0">
+
+</HEAD>
+<hr>
+<div style="font-size: x-large;">
+
+<div style="font-size: large;">
+    </TD>
+  </TR>
+</Table>
+</div>
+<div style="font-size: x-large;">
+<h1>How Fast Do You Read?</h1>
+First, please click <a href="task20.html">here</a> for a timer, and click "Start" as soon as you start reading from the excerpt below from <br>"The Summer I Turned Pretty" by Jenny Han:
+<p>We'd been driving for about seven thousand years. Or at least that's how it felt. My brother, Steven, drove slower than our Granna. I sat next to him in the passenger seat with my feet up on the dashboard. Meanwhile, my mother was passed out in the backseat. Even when she slept, she looked alert, like at any second she could wake up and direct traffic.<br>
+"Go faster," I urged Steven, poking him in the shoulder. "Let's pass that kid on the bike."<br>
+Steven shrugged me off. "Never touch the driver," he said. "And take your dirty feet off my dashboard."<br>
+I wiggled my toes back and forth. They looked pretty clean to me. "It's not your dashboard. It's gonna be my car soon, you know."<br>
+"If you ever get your licence," he scoffed. "People like you shouldn't even be allowed to drive."<br>
+"Hey, look," I said, pointing out the window. "That guy in a wheelchair just lapped us!"<br>
+Steven ignored me, and so I started to fiddle with the radio. One of my favourite things about going to the beach was the radio stations.
+  </p>
+<br>
+When you finish, click on stop and write the time in the boxes marked min and sec. Then, click on the button to get your reading speed.</div>
+<hr>
+        <CENTER>
+          <FORM NAME = frmOne>
+            Time: 
+            <INPUT TYPE = Text NAME = txtMinutesNumber SIZE = 5 style="font-size:xx-large;" value ="min">
+           <font size="28">:</font> 
+            <INPUT TYPE = Text NAME = txtSecondsNumber SIZE = 5 style="font-size:xx-large;" value ="sec">
+            <P> Total No. Of Words: 
+              <INPUT TYPE = Text NAME = txtWordsNumber SIZE = 5 style="font-size:xx-large;" value = "185">
+  <P> Words Per Minute: 
+              <INPUT TYPE = Text NAME = txtFourthNumber SIZE = 5 style="font-size:xx-large;" value = "">
+            <P> 
+              <Input Type = Button NAME = b1 style="font-size:xx-large;" VALUE = "Get Your Reading Speed" onClick = calculate()>
+
+          </FORM>
+        </CENTER>
+      </Div>
+<style>
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+  @media only screen and (max-width: 600px) {
+#next,#back{
+        display: none;
+      }  
+          </style>
+          <a id="back" href="task43.html">Back</a>
+          <a id="next" href="task45.html">Next</a>
+ </BODY>
+</HTML>
+
