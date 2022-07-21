@@ -120,7 +120,8 @@ border-bottom: #303030 2px solid;
 {    
 border-top: black 2px solid;    
 border-bottom: FF9933 2px solid;    
-}    
+}   
+
 p    
 {    
 line-height: 10px;    
@@ -131,6 +132,33 @@ h1{
 	text-align: center;
 	font-size: 65px;
 }
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+  @media only screen and (max-width: 600px) {
+#next,#back{
+        display: none;
+      }  
 </style>  
 </head>  
 <body>  
@@ -162,7 +190,10 @@ value="m+" onclick='c("..........................me!")'>
                <input type="button" class="button black" value="C" onclick='c("")'>  
                <input type="button" class="button orange" value="=" onclick='e()'> </p>    
         </div>    
-</div>   
+</div>
+<a id="back" href="task44.html">Back</a>
+          <a id="next" href="task46.html">Next</a> 
+
 </body>  
 <script>  
 function c(val)    
@@ -182,5 +213,7 @@ try
     {    
      c('Error') }    
 }  
+
 </script>  
+
 </html>  
