@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+  #drag-1, #drag-2, #drag-3 , #drag-4, #drag-5, #drag-6, #drag-7, #drag-8, #drag-9, #drag-10, #drag-11, #drag-12, #drag-13, #drag-14, #drag-15, #drag-16, #drag-17, #drag-18, #drag-19, #drag-20, #drag-21, #drag-22{
+  width: 0%;
+  min-height: 0;
+  margin: 1rem 0 0 1rem;
+  color: blue;
+  padding: 0%;
+  background-color: #63d8c1;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
+}
+html{
+  background-color: #63d8c1;
+}
+
+ #next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #fcf6a4;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+          
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+          }
+          a:hover {
+            background-color: #FEFBFC;
+          }    </style>
+
+
+</style>
+</head>
+<body>
+  <h1>Drag & Drop!</h1>
+  <h3>Drag the Different Pieces and Make Your Own Pictures!</h3>
+  <div id="drag-1" class="draggable">
+   <img  src="Images/Duck/Head1.png" width="300px" alt="head1">
+  </div>
+  <div id="drag-2" class="draggable">
+   <img  src="Images/Duck/Head2.png" width="300px" alt="head2">
+  </div>
+  <div id="drag-3" class="draggable">
+   <img src="Images/Duck/Head3.png" width="300px" alt="head3">
+  </div>
+   <div id="drag-4" class="draggable">
+   <img  src="Images/Duck/eye1a.png" width="50px" alt="eyes1a">
+  </div>
+   <div id="drag-5" class="draggable">
+   <img  src="Images/Duck/eye1b.png" width="50px" alt="eyes1b">
+  </div>
+   <div id="drag-6" class="draggable">
+   <img  src="Images/Duck/eye2a.png" width="50px" alt="eyes2a">
+  </div>
+    <div id="drag-7" class="draggable">
+   <img  src="Images/Duck/eye2b.png" width="50px" alt="eyes2b">
+  </div>
+    <div id="drag-8" class="draggable">
+   <img src="Images/Duck/mouth1.png" width="150px" alt="mouth1">
+  </div>
+    <div id="drag-9" class="draggable">
+   <img src="Images/Duck/mouth2.png" width="150px" alt="mouth2">
+  </div>
+    <div id="drag-10" class="draggable">
+   <img src="Images/Duck/mouth3.png" width="150px" alt="mouth3">
+  </div>
+  <div id="drag-11" class="draggable">
+  <img src="Images/Duck/eyebrows1.png" width="100px" alt="eyebrows1">
+  </div>
+  <div id="drag-12" class="draggable">
+  <img src="Images/Duck/eyebrows2.png" width="100px" alt="eyebrows2">
+  </div>
+  <div id="drag-13" class="draggable">
+  <img src="Images/Duck/eyebrows3.png" width="100px" alt="eyebrows3">
+  </div>
+  <div id="drag-14" class="draggable">
+    <img src="Images/Duck/Accessory1.png" width="200px" alt="accessory1">
+  </div>
+  <div id="drag-15" class="draggable">
+    <img src="Images/Duck/accessory2.png" width="200px" alt="accessory2">
+  </div>
+  <div id="drag-16" class="draggable">
+    <img src="Images/Duck/accessory3.png" width="200px" alt="accessory3">
+  </div>
+  <div id="drag-17" class="draggable">
+   <img  src="Images/Duck/eye3a.png" width="50px" alt="eyes3a">
+  </div>
+  <div id="drag-18" class="draggable">
+   <img  src="Images/Duck/eye3b.png" width="50px" alt="eyes3b">
+  </div>
+  <div id="drag-19" class="draggable">
+   <img  src="Images/Duck/eye4a.png" width="50px" alt="eyes4a">
+  </div>
+  <div id="drag-20" class="draggable">
+   <img  src="Images/Duck/eye4b.png" width="50px" alt="eyes4b">
+  </div>
+  <div id="drag-21" class="draggable">
+   <img  src="Images/Duck/eye5a.png" width="50px" alt="eyes5a">
+  </div>
+  <div id="drag-22" class="draggable">
+   <img  src="Images/Duck/eye5b.png" width="50px" alt="eyes5b">
+  </div>
+  
+  
+<script type="module">
+import interact from 
+'https://cdn.interactjs.io/v1.10.11/interactjs/index.js'
+
+interact('.item').draggable({
+  listeners: {
+    move (event) {
+      console.log(event.pageX,
+                  event.pageY)
+    }
+  }
+})
+
+// target elements with the "draggable" class
+interact('.draggable')
+  .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+      })
+    ],
+    // enable autoScroll
+    autoScroll: true,
+
+    listeners: {
+      // call this function on every dragmove event
+      move: dragMoveListener,
+
+      // call this function on every dragend event
+      end (event) {
+        var textEl = event.target.querySelector('p')
+
+        textEl && (textEl.textContent =
+          'moved a distance of ' +
+          (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                     Math.pow(event.pageY - event.y0, 2) | 0))
+            .toFixed(2) + 'px')
+      }
+    }
+  })
+
+function dragMoveListener (event) {
+  var target = event.target
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+  // translate the element
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
+
+// this function is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener
+</script>
+ <a id="back" href="task50.html">Back</a>  
+<a id="next" href="task52.html">Next</a> 
+</body>
+</body>
+</html>

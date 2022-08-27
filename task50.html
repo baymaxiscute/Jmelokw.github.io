@@ -1,0 +1,117 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	html{
+		text-align: center;
+		padding-top: 200px;
+		background-color: #f9f69f;
+	}
+	.rotate {
+  transform: rotate(180deg);
+}
+	.tap-target {
+		display:  flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 16em;
+		height: 16em;
+		padding: 1em;
+		margin: 1rem auto;
+		box-sizing: border-box;
+		border-radius: 100%;
+		font-size: 1.125em;
+		text-align: center;
+		color: #fff;
+		background-color: #d0a1fc;
+		cursor: pointer;
+		touch-action: none;
+		user-select: none;
+		transition: all 0.3s;
+	}
+	.tap-target.switch-bg {
+		background-color: #75e5b6;
+	}
+	.tap-target.large{
+		transform: scale(1.25);
+	}
+	#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #ffbade;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+          
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+          }
+          a:hover {
+            background-color: #FEFBFC;
+          }
+      </style>
+  </head>
+  <body>
+  	<div class="tap-target">
+  		<p>Tap To Change Color</p>
+  		<p>Doubletap To Change Size</p>
+  		<p>Hold To Rotate</p>
+  	</div>
+  	<script type="module">
+  		import interact from 
+  		'https://cdn.interactjs.io/v1.10.13/interactjs/index.js'
+  		interact('.item').draggable({
+  			listeners:{
+  				move(event) {
+  					console.log(event.pageX,
+  						event.pageY)
+  				}
+  			}
+  		})
+  		interact('.tap-target')
+  .on('tap', function (event) {
+    event.currentTarget.classList.toggle('switch-bg')
+    event.preventDefault()
+  })
+  .on('doubletap', function (event) {
+    event.currentTarget.classList.toggle('large')
+    event.currentTarget.classList.remove('rotate')
+    event.preventDefault()
+  })
+  .on('hold', function (event) {
+    event.currentTarget.classList.toggle('rotate')
+    event.currentTarget.classList.remove('large')
+  })
+  		</script>
+  	</script>
+  		<a id="back" href="task49.html">Back</a>
+  		<a id="next" href="task51.html">Next</a>
+  	</body>
+  	</html>
