@@ -1,0 +1,93 @@
+<!Doctype html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+		<title>JavaScript Geolocation</title>
+	</head>
+	<style type="text/css">
+	html{
+		font-family: 'Space Mono', monospace;
+		background-color: #a8daf4;
+		text-align: center;
+		padding-top: 200px;
+		font-size: 25px;
+	}
+	html:hover{
+		background-color: #f7d87b;
+	}
+	button{
+		background-color: #db8bed;
+		width: 150px;
+		height: 50px;
+		border-radius: 10px;
+		font-family: 'Space Mono', monospace;
+		font-size: 25px;
+	}
+	button:hover{
+		background-color: #f9c1a9;
+	}
+	
+	#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #fcf6a4;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+          
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+          }
+      </style>
+      <body>
+      	<div class="h2">
+      		<h2>JavaScript Geolocation</h2>
+      	</div>
+      	<div class="p">
+      		<p>Click The Button To Get Your Coordinates.</p>
+      	</div>
+      	<button onclick="getLocation()">Try It</button>
+      	<p id="demo"></p>
+      	<script>
+      		const x = document.getElementById("demo");
+      		function getLocation() {
+      			try{
+      				navigator.geolocation.getCurrentPosition(showPosition);} catch {
+      					x.innerHTML = err;
+      				}
+      			}
+      			function showPosition (position){
+      				x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+      			}
+      		</script>
+      		<a id="back" href="task52.html">Back</a>
+      		<a id="next" href="task54.html"> Next</a>
+      	</body>
+      	</html>
