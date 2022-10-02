@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-color: lightblue;
+        margin: 0px;
+    }
+    #firstname{
+        position: absolute;
+        top: 320px;
+        left: 35%;
+        font-size: 36px;
+        transform: translate(-50%, -50%);
+
+    }
+    #lastname{
+        position: absolute;
+        top: 350px;
+        left: 35%;
+        font-size: 35px;
+        transform: translate(-50%, -50%);
+    }
+    p{
+        font-family: 'Comfortaa', cursive;
+    }
+
+    #Head{
+        background-image: url("Images/Teamwork_Quokka/Head-01.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        top: 330px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: -2;
+    }
+    
+    #button1{
+        width: 210px;
+        height: 72px;
+        margin: 5px;
+        top: 50px;
+        cursor: pointer;
+        outline: none;
+        border-radius: 30px;
+        font-family: 'Comfortaa', cursive;
+        background-color: white;
+        border-style: none;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-height: 550px) {
+    #Head{
+        top: 320px;
+    }
+}
+
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #fcf6a4;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+        //--><!]]>
+    </script>
+    <script>
+        const firstname=["triumphant", "elated", "focused", "relaxed", "quirky", "clever", "thoughtful", "charming", "calm", "tactical", "attentive", "friendly", "enthusiaastic", "energetic", "quiet", "cheeky", "generous" ];
+        let randomIndex=Math.floor(Math.random()*firstname.length);
+            document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+        function randomname(){
+            let randomIndex=Math.floor(Math.random()*firstname.length);
+            document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+        }
+    </script>
+    <div id="Head"></div>
+    <p id="firstname">teamwork</p>
+    <p id="lastname">quokka</p>
+    <button id="button1" onClick="changehead(); randomname();">Teamwork Quokka</button>
+<script>
+    var headnumber = Math.floor(Math.random() * 6)+1;
+    document.getElementById("Head").style.backgroundImage = `url('Teamwork_Quokka/Quokka-0${headnumber}.png')`;
+    function changehead() {
+        headnumber += 1;
+        if (headnumber > 6) {
+            headnumber = 1;
+        }
+        document.getElementById("Head").style.backgroundImage = `url('Teamwork_Quokka/Quokka-0${headnumber}.png')`;
+        }
+</script>
+<a id="back" a href="task54.html">Back</a>
+<a id="next" a href="task56.html">Next</a>
+</body>
+</html>
