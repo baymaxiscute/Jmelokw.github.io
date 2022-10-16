@@ -11,7 +11,7 @@
     }
     #firstname{
         position: absolute;
-        top: 320px;
+        top: 310px;
         left: 35%;
         font-size: 36px;
         transform: translate(-50%, -50%);
@@ -108,11 +108,18 @@
     </script>
     <script>
         const firstname=["triumphant", "elated", "focused", "relaxed", "quirky", "clever", "thoughtful", "charming", "calm", "tactical", "attentive", "friendly", "enthusiastic", "energetic", "quiet", "cheeky", "generous" ];
+        const lastname=["coconut", "pumpkin", "cashew", "vanilla", "ginger", "sesame", "mint", "wasabi", "lemon", "lemonade", "peach", "tequila", "cola", "strawberry", "blueberry", "pineapple", "mojito", "martini"];
+        
         let randomIndex=Math.floor(Math.random()*firstname.length);
             document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+        let randomIndex2=Math.floor(Math.random()*lastname.length);
+            document.getElementById("lastname").innerHTML =("value",lastname[randomIndex2]);
+        
         function randomname(){
             let randomIndex=Math.floor(Math.random()*firstname.length);
             document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+            let randomIndex2=Math.floor(Math.random()*lastname.length);
+            document.getElementById("lastname").innerHTML =("value",lastname[randomIndex2]);
         }
     </script>
     <div id="Head"></div>
