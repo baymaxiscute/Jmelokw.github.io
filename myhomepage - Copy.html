@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-color: #79fcca;
+        margin: 0px;
+    }
+    #firstname{
+        position: absolute;
+        top: 310px;
+        left: 25%;
+        font-size: 36px;
+        transform: translate(-50%, -50%);
+
+    }
+    #lastname{
+        position: absolute;
+        top: 350px;
+        left: 25%;
+        font-size: 35px;
+        transform: translate(-50%, -50%);
+    }
+    p{
+        font-family: 'Comfortaa', cursive;
+    }
+
+    #Head{
+        background-image: url("Images/ShapeGuys/ShapeGuy-01.gif");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        width:300px;
+        height: 400px;
+        top: 330px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: -2;
+    }
+    
+    #button1{
+        width: 210px;
+        height: 72px;
+        margin: 5px;
+        top: 50px;
+        cursor: pointer;
+        outline: none;
+        border-radius: 30px;
+        font-family: 'Comfortaa', cursive;
+        background-color: white;
+        border-style: none;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-height: 550px) {
+    #Head{
+        top: 320px;
+    }
+}
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+        //--><!]]>
+    </script>
+    <script>
+        const firstname=["adorable", "gentle", "accismus", "acuminous", "insoucient", "idiosyncratic", "cryptic", "comical", "lethargic", "egocentric", "narcassistic", "analytical", "effervescent", "vivacious", "psychopathic", "sociopathic", "vernacular", "colloquial", "sagacious", "sanguine"];
+        const lastname=["marigold", "sycamore", "daffodil", "jasmine", "sunflower", "spruce", "chrysanthemum", "birch", "blossom", "dahlia", "iris", "poppy", "tulip", "bluebells", "heather", "lavender", "cedar", "maple"];
+        
+        let randomIndex=Math.floor(Math.random()*firstname.length);
+            document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+        let randomIndex2=Math.floor(Math.random()*lastname.length);
+            document.getElementById("lastname").innerHTML =("value",lastname[randomIndex2]);
+        
+        function randomname(){
+            let randomIndex=Math.floor(Math.random()*firstname.length);
+            document.getElementById("firstname").innerHTML =("value",firstname[randomIndex]);
+            let randomIndex2=Math.floor(Math.random()*lastname.length);
+            document.getElementById("lastname").innerHTML =("value",lastname[randomIndex2]);
+        }
+    </script>
+    <div id="Head"></div>
+    <p id="firstname">Shape</p>
+    <p id="lastname">Guy</p>
+    <button id="button1" onClick="changehead(); randomname();">Click to Change!</button>
+<script>
+    var headnumber = Math.floor(Math.random() * 6)+1;
+    document.getElementById("Head").style.backgroundImage = `url('Images/ShapeGuys/ShapeGuy-0${headnumber}.gif')`;
+    function changehead() {
+        headnumber += 1;
+        if (headnumber > 6) {
+            headnumber = 1;
+        }
+        document.getElementById("Head").style.backgroundImage = `url('Images/ShapeGuys/ShapeGuy-0${headnumber}.gif')`;
+        }
+</script>
+</body>
+</html>
