@@ -1,0 +1,109 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="with=device-width,initial-scale=1">
+	<title>Colour Gradients</title>
+	<style>
+	@layer base, support, demo;
+@import "https://unpkg.com/open-props" layer(base);
+
+@layer demo{
+	.gradient-stripes{
+		--direction: to top right;
+		--stripe-size: 2px;
+		--stripe-gap: 15px;
+
+		mask: repeating-linear-gradient(
+			var(--direction),
+			black, black var (--stripe-size),
+			transparent 0%, transparent var(--stripe-gap)
+			);
+	}
+
+	.gradient-stripes:nth-child(1){
+		background: var(--gradient-18);
+		--direction: to bottom right;
+	}
+	.gradient-stripes:nth-child(2){
+		background: var(--gradient-20);
+		--direction: to right;
+	}
+	.gradient-stripes:nth-child(3){
+		background: var(--gradient-26);
+		--direction: to bottom left;
+	}
+	.gradient-stripes:nth-child(4){
+		background: var(--gradient-3);
+		--stripe-size: 15px;
+		--stripe-gap: 30px;
+	}
+	.gradient-stripes:nth-child(5){
+		background: var(--gradient-12);
+		--stripe-size: 1px;
+		--stripe-gap: 10px;
+	}
+	.gradient-stripes:nth-child(6){
+		background: var(--gradient-22);
+		--stripe-size: 4px;
+		--stripe-gap: 24px;
+	}
+}
+
+@layer support{
+	html{block-size: 100%}
+
+	body{
+		margin: 5vmin 0;
+		min-block-size: 100%;
+		display: grid;
+		place-content: center;
+		grid-template-columns: repeat(3,minmax(30%,1fr));
+		padding-inline: 5vmin;
+		gap: 5vmin;
+	}
+
+	.card{
+		aspect-ratio: var(--ratio-portrait);
+		border-radius: var(--radius-3);
+	}
+	#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+  @media only screen and (max-width: 600px) {
+#next,#back{
+        display: none;
+      }  
+}</style>
+</head>
+<body>
+	<div class="card gradient-stripes"></div>
+	<div class="card gradient-stripes"></div>
+	<div class="card gradient-stripes"></div>
+	<div class="card gradient-stripes"></div>
+	<div class="card gradient-stripes"></div>
+	<div class="card gradient-stripes"></div>
+	<a id="back" href="task57.html">Back</a> 
+<a id="next" href="task59.html">Next</a> 
+</body>
+</html>

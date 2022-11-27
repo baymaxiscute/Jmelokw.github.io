@@ -22,7 +22,6 @@
    height: 100vh;
   background-color: #81e8e1;
 }
-
 		main{
 			background-color: #a682f2;
 			height: 27rem;
@@ -56,6 +55,29 @@
 			align-self: start;
 			font-weight: bold;
 		}
+		#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #c19bf7;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
 
 		#text{
 			height: 5rem;
@@ -204,5 +226,7 @@
       })
       voicespeech()
 </script>
+<a id="back" href="task56.html">Back</a> 
+<a id="next" href="task58.html">Next</a> 
 </body>
 </html>
