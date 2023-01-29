@@ -1,0 +1,721 @@
+<!Doctype html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+ html{
+  background-image: url(Images/sea3.png);
+  background-repeat: no-repeat;
+         background-size: 1800px 600px;
+ }
+
+ @keyframes seastar {
+   0%   { left:200px; top:60px;}
+  50%  { left:210px; top:60px;}
+  100%  { left:200px; top:60px;}
+}
+
+@keyframes whaleshark {
+   0%   { left:840px; top:350px;}
+  50%  { left:740px; top:350px;}
+  100%  { left:840px; top:350px;}
+}
+
+@keyframes duck {
+   0%   { left:350px; top:190px;}
+  50%  { left:320px; top:200px;}
+  100%  { left:350px; top:190px;}
+}
+
+@keyframes arapaima {
+   0%   { left:880px; top:180px;}
+  50%  { left:790px; top:160px;}
+  100%  { left:880px; top:180px;}
+}
+
+@keyframes turtle {
+   0%   { left:130px; top:125px;}
+  50%  { left:123px; top:150px;}
+  100%  { left:130px; top:125px;}
+}
+
+@keyframes anglerfish {
+   0%   { left:250px; top:520px;}
+  50%  { left: 242px; top:480px;}
+  100%  { left:250px; top:520px;}
+}
+
+@keyframes goldfish {
+   0%   { left:231px; top:170px;}
+  50%  { left: 53px; top:150px;}
+  100%  { left:231px; top:170px;}
+}
+
+@keyframes piranha {
+   0%   { left:523px; top:170px;}
+  50%  { left: 430px; top:190px;}
+  100%  { left:523px; top:170px;}
+}
+
+@keyframes kingpenguin {
+   0%   { left:523px; top:276px;}
+  50%  { left: 230px; top:373px;}
+  100%  { left:523px; top:276px;}
+}
+
+@keyframes platypus {
+   0%   { left:623px; top:176px;}
+  50%  { left: 830px; top:173px;}
+  100%  { left:623px; top:176px;}
+}
+
+@keyframes polarbear {
+   0%   { left:323px; top:376px;}
+  50%  { left: 530px; top:378px;}
+  100%  { left:323px; top:376px;}
+}
+
+@keyframes crocodile {
+   0%   { left:923px; top:176px;}
+  50%  { left: 830px; top:178px;}
+  100%  { left:923px; top:176px;}
+}
+
+@keyframes sealion {
+   0%   { left:623px; top:376px;}
+  50%  { left: 730px; top:278px;}
+  100%  { left:623px; top:376px;}
+}
+
+@keyframes clownfish {
+   0%   { left:523px; top:76px;}
+  50%  { left: 830px; top:78px;}
+  100%  { left:523px; top:76px;}
+}
+
+@keyframes goose {
+   0%   { left:123px; top:138px;}
+  50%  { left: 830px; top:178px;}
+  100%  { left:123px; top:138px;}
+}
+
+@keyframes redcrab {
+   0%   { left:623px; top:38px;}
+  50%  { left: 830px; top:78px;}
+  100%  { left:623px; top:38px;}
+}
+
+@keyframes walrus {
+   0%   { left:823px; top:338px;}
+  50%  { left: 630px; top:378px;}
+  100%  { left:823px; top:338px;}
+}
+
+@keyframes seajelly {
+   0%   { left:323px; top:338px;}
+  50%  { left: 630px; top:378px;}
+  100%  { left:323px; top:338px;}
+}
+
+@keyframes seal {
+   0%   { left:343px; top:342px;}
+  50%  { left: 330px; top:392px;}
+  100%  { left:343px; top:342px;}
+}
+
+@keyframes orangecrab {
+   0%   { left:890px; top:38px;}
+  50%  { left: 563px; top:78px;}
+  100%  { left:890px; top:38px;}
+}
+
+@keyframes boxjelly {
+   0%   { left:642px; top:368px;}
+  50%  { left: 690px; top:342px;}
+  100%  { left:642px; top:368px;}
+}
+
+@keyframes hammerheadshark {
+   0%   { left:642px; top:368px;}
+  50%  { left: 790px; top:342px;}
+  100%  { left:642px; top:368px;}
+}
+
+@keyframes octopus {
+   0%   { left:924px; top:468px;}
+  50%  { left: 790px; top:490px;}
+  100%  { left:924px; top:468px;}
+}
+
+@keyframes nautilus {
+   0%   { left:424px; top:488px;}
+  50%  { left: 430px; top:470px;}
+  100%  { left:424px; top:488px;}
+}
+
+@keyframes squid {
+   0%   { left:884px; top:488px;}
+  50%  { left: 830px; top:470px;}
+  100%  { left:884px; top:488px;}
+}
+
+@keyframes cuttlefish {
+   0%   { left:684px; top:488px;}
+  50%  { left: 630px; top:470px;}
+  100%  { left:684px; top:488px;}
+}
+
+@keyframes narwhal {
+   0%   { left:784px; top:419px;}
+  50%  { left: 630px; top:400px;}
+  100%  { left:784px; top:419px;}
+}
+
+@keyframes beluga {
+   0%   { left:884px; top:310px;}
+  50%  { left: 730px; top:320px;}
+  100%  { left:884px; top:310px;}
+}
+
+@keyframes pinkdolphin {
+   0%   { left:684px; top:330px;}
+  50%  { left: 530px; top:360px;}
+  100%  { left:684px; top:330px;}
+}
+
+@keyframes bottlenose {
+   0%   { left:584px; top:380px;}
+  50%  { left: 430px; top:320px;}
+  100%  { left:584px; top:380px;}
+}
+
+@keyframes porpoise {
+   0%   { left:384px; top:370px;}
+  50%  { left: 230px; top:300px;}
+  100%  { left:384px; top:370px;}
+}
+
+@keyframes orca {
+   0%   { left:284px; top:340px;}
+  50%  { left: 330px; top:320px;}
+  100%  { left:284px; top:340px;}
+}
+
+@keyframes bluewhale {
+   0%   { left:884px; top:340px;}
+  50%  { left: 630px; top:320px;}
+  100%  { left:884px; top:340px;}
+}
+
+@keyframes shrimp {
+   0%   { left:684px; top:240px;}
+  50%  { left: 530px; top:120px;}
+  100%  { left:684px; top:240px;}
+}
+
+@keyframes marineiguana {
+   0%   { left:384px; top:80px;}
+  50%  { left: 230px; top:90px;}
+  100%  { left:384px; top:80px;}
+}
+
+@keyframes giantriverotter {
+   0%   { left:384px; top:180px;}
+  50%  { left: 230px; top:190px;}
+  100%  { left:384px; top:180px;}
+}
+
+
+ #seastar{
+  background-image: url("Images/Seastar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 80px;
+  animation-name: seastar;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+#whaleshark{
+  background-image: url("Images/whaleshark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 95px;
+  width: 180px;
+  animation-name: whaleshark;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+#duck{
+  background-image: url("Images/Duck.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 60px;
+  animation-name: duck;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+ #arapaima{
+  background-image: url("Images/arapaima.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 80px;
+  animation-name: arapaima;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+ #turtle{
+  background-image: url("Images/turtle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 55px;
+  width: 70px;
+  animation-name: turtle;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+  #anglerfish{
+  background-image: url("Images/anglerfish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 120px;
+  animation-name: anglerfish;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+ #goldfish{
+  background-image: url("Images/goldfish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 50px;
+  animation-name: goldfish;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+ #piranha{
+  background-image: url("Images/Piranha.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 70px;
+  animation-name: piranha;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  position: absolute;
+ }
+
+ #kingpenguin{
+  background-image: url("Images/kingpenguin.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 50px;
+  animation-name: kingpenguin;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#platypus{
+  background-image: url("Images/platypus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 32px;
+  animation-name: platypus;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#polarbear{
+  background-image: url("Images/polarbear.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 120px;
+  width: 62px;
+  animation-name: polarbear;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#crocodile{
+  background-image: url("Images/crocodile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 120px;
+  width: 80px;
+  animation-name: crocodile;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#sealion{
+  background-image: url("Images/sealion.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 30px;
+  animation-name: sealion;
+  animation-duration: 29s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#clownfish{
+  background-image: url("Images/clownfish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 50px;
+  animation-name: clownfish;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#goose{
+  background-image: url("Images/goose.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 40px;
+  animation-name: goose;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#redcrab{
+  background-image: url("Images/redcrab.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 35px;
+  animation-name: redcrab;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#walrus{
+  background-image: url("Images/walrus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 65px;
+  animation-name: walrus;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#seajelly{
+  background-image: url("Images/seajelly.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 62px;
+  width: 26.5px;
+  animation-name: seajelly;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#seal{
+  background-image: url("Images/seal.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 45px;
+  animation-name: seal;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#orangecrab{
+  background-image: url("Images/orangecrab.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 52px;
+  width: 41px;
+  animation-name: orangecrab;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#boxjelly{
+  background-image: url("Images/boxjellyfish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 34.5px;
+  animation-name: boxjelly;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#hammerheadshark{
+  background-image: url("Images/hammerheadshark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 132px;
+  width: 49.5px;
+  animation-name: hammerheadshark;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#octopus{
+  background-image: url("Images/octopus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+  width: 29.5px;
+  animation-name: octopus;
+  animation-duration: 17.5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#nautilus{
+  background-image: url("Images/nautilus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 56px;
+  width: 32px;
+  animation-name: nautilus;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#squid{
+  background-image: url("Images/squid.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 56px;
+  width: 32px;
+  animation-name: squid;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#cuttlefish{
+  background-image: url("Images/cuttlefish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 56px;
+  width: 32px;
+  animation-name: cuttlefish;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#narwhal{
+  background-image: url("Images/narwhal.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: narwhal;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#beluga{
+  background-image: url("Images/beluga.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: beluga;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#pinkdolphin{
+  background-image: url("Images/pinkdolphin.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: pinkdolphin;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#bottlenose{
+  background-image: url("Images/bottlenose.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: bottlenose;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#porpoise{
+  background-image: url("Images/porpoise.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: porpoise;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#orca{
+  background-image: url("Images/orca.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: orca;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#bluewhale{
+  background-image: url("Images/bluewhale.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 62px;
+  animation-name: bluewhale;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#shrimp{
+  background-image: url("Images/shrimp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 30px;
+  animation-name: shrimp;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#marineiguana{
+  background-image: url("Images/marineiguana.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 121px;
+  width: 80px;
+  animation-name: marineiguana;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#giantriverotter{
+  background-image: url("Images/giantriverotter.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 60px;
+  animation-name: giantriverotter;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+  <button class="buttonmusic" onClick="playAudio();" >Music</button>
+	<div id="seastar"></div>
+  <div id="whaleshark"></div>
+  <div id="duck"></div>
+  <div id="arapaima"></div>
+  <div id="turtle"></div>
+  <div id="anglerfish"></div>
+  <div id="goldfish"></div>
+  <div id="piranha"></div>
+  <div id="kingpenguin"></div>
+  <div id="platypus"></div>
+  <div id="polarbear"></div>
+  <div id="crocodile"></div>
+  <div id="sealion"></div>
+  <div id="clownfish"></div>
+  <div id="goose"></div>
+  <div id="redcrab"></div>
+  <div id="walrus"></div>
+  <div id="seajelly"></div>
+  <div id="seal"></div>
+  <div id="orangecrab"></div>
+  <div id="boxjelly"></div>
+  <div id="hammerheadshark"></div>
+  <div id="octopus"></div>
+  <div id="nautilus"></div>
+  <div id="squid"></div>
+  <div id="cuttlefish"></div>
+  <div id="narwhal"></div>
+  <div id="beluga"></div>
+  <div id="pinkdolphin"></div>
+  <div id="bottlenose"></div>
+  <div id="porpoise"></div>
+  <div id="orca"></div>
+  <div id="bluewhale"></div>
+  <div id="shrimp"></div>
+  <div id="marineiguana"></div>
+  <div id="giantriverotter"></div>
+  <script type="text/javascript">
+     function playAudio() { 
+        var a = document.getElementById("myAudio");
+    
+        if (a.paused) {
+            a.play();
+        }
+        else {
+            a.pause();
+            a.currentTime = 0;
+        }
+        };
+  </script>
+
+  <audio loop id="myAudio">
+    <source id="myAudio" src="Music/bgm3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+</body>
+
+
+</html>
