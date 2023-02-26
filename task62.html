@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">  
-    <title>Memory Card Game</title>
+    <title>Kawaii Memory Card Game</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -119,6 +119,28 @@ body{
   .card .back-view img{
     max-width: 35px;
   }
+}
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
 }
     </style>
   </head>
@@ -323,6 +345,7 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
     </script>
-
+<a id="back" href="task61.html">Back</a>
+<a id="next" href="task63.html">Next</a>
   </body>
 </html>
