@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html id="color">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Picker (RGB)🎨</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+    button{
+        height: 90px;
+        width: 160px;
+    }
+    html{
+        background-color: lightblue;
+        font-family: 'Poppins', sans-serif;
+        text-align: center; 
+        color:white;
+    }
+
+    h1{
+        line-height: 4px;
+        padding-top:25px;
+    }
+
+    a{
+            background-color:#AFB4E0 ;
+            transform: translate(0%, -50%);
+            color:#000000 ;
+            text-decoration: none;
+          }
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #65bec6;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 350px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+           a:hover{
+
+            background-color: #FEFBFC;
+          }
+          
+  @media only screen and (max-width: 600px) {
+#next2,#back2{
+   display: block;
+          }        
+
+#next,#back{
+        display: none;
+      }
+          }
+          a:hover {
+            background-color: #FEFBFC;
+          }
+      </style>
+<h1>Pick a Colour!🎨</h1>
+<h2>RGB!</h2>
+
+<input type="range" id="myRange1" max="255" onchange="changeColor()">
+<span id="Rr">127.5</span>
+<input type="range" id="myRange2" max="255" onchange="changeColor()">
+<span id="Gg">127.5</span>
+<input type="range" id="myRange3" max="255" onchange="changeColor()">
+<span id="Bb">127.5</span>
+
+
+
+<div id="">
+ <script type="text/javascript">                              
+
+    function changeColor() {
+        var x = document.getElementById("myRange1").value ;
+        var y = document.getElementById("myRange2").value ;
+        var z = document.getElementById("myRange3").value ;
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bgColor);
+        
+        document.getElementById("color").style.backgroundColor = bgColor;
+        document.getElementById("Rr").innerHTML = x;
+        document.getElementById("Gg").innerHTML = y;
+        document.getElementById("Bb").innerHTML = z;
+
+    }
+    function random_bg_color(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            var bgColor = "rgb(" + x + "," + y + "," + z + ")"  
+            console.log(bgColor);
+            document.getElementById("clicks").style.backgroundColor = bgColor;  
+        }
+    </script>
+</div>   
+<br><br><br>
+<button id="clicks" type="button" onClick="random_bg_color();playAudio();">Click Me!</button>   
+</body>
+
+
+<a id="back" href="task41.html">Back</a>  
+ <a id="next" href="task43.html">Next</a> 
+</html>
