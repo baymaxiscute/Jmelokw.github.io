@@ -1,118 +1,116 @@
 <!DOCTYPE html>
-<html id="color">
+<html>
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colour Picker (RGB)🎨</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/126/126472.png" type="image/png" sizes="32x32">
+    <style type="text/css">
+    #left{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+        }
+
+    #right{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+        } 
+        a{
+                padding: 20px;
+                background-color: #f9acbd;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px ;
+                color: #90f4c4;
+                text-decoration: underline;
+                font-family: 'Scheherazade New', serif;
+        }
+    html{
+        text-align: center;
+        padding-top: 20px;
+        font-family: 'Scheherazade New', serif;
+        background-color: #bdd8f9;
+        color: #5cb3c9;
+    }
+    button{
+        background-color: #FFFFFF;
+        font-family: 'Scheherazade New', serif;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        border-radius: 50px;
+        padding: 25px;
+        color: #e04cca;
+        font-size: 25px;
+        outline: none;
+    }
+    button:hover{
+        color: #f7bbe1;
+    }
+    #randomSport{
+        font-family: 'Scheherazade New', serif;
+        background-color: #bb02cc;
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: inline-block;
+        border: none;
+        border-radius: 30px;
+        color: #dddddd;
+        font-size: 35px;
+        outline: none;
+    }
+    
+</style>
 </head>
 <body>
-    <style>
-    button{
-        height: 90px;
-        width: 160px;
-    }
-    html{
-        background-color: lightblue;
-        font-family: 'Poppins', sans-serif;
-        text-align: center; 
-        color:white;
-    }
+    <div>
+        <button onclick="findSport();" type="randomSport">Click Me To Generate a Random Colour!</button>
+        <br>
+        <p name="randomSport" id="randomSport"></p>
+        <br><br>
+    </div>
+    <script>
+        const sports=[
+        "Red #FF0000", 
+        "African Tulip #FF4000", 
+        "Orange #FF8000", 
+        "Marigold #FFA500",
+        "Yellow #FFFF00", 
+        "Grevillea Moonlight #FFF49E",
+        "Chartreuse Gladiolus #BFFF00", 
+        "Green #00FF5E", 
+        "Turquoise Ixia #00FFBF", 
+        "Bird-bill Dayflower #3C00FF", 
+        "Blue Orchid #00C3FF", 
+        "Blue #0000FF", 
+        "Bellflower #6A00FF", 
+        "Purple #A020F0", 
+        "Verbena #EA00FF", 
+        "Orchid #FF00BF", 
+        "White #FFFFFF", 
+        "Black #000000",
+        "Fuchsia #FF0062",
+        "Moonflower #FFFBE0",
+        "Middlemist's Red Camellia #FF0F33",
+        "Franklinia #FFF5E0",
+        "Lavender #BA8FFF",
+        "Aromatic Aster #9980FF",
+        "Daffodil #FFE675",
+        "Purple Iris #5A00A3",
+        "Azalea #FF7AA4"];
 
-    h1{
-        line-height: 4px;
-        padding-top:25px;
-    }
-
-    a{
-            background-color:#AFB4E0 ;
-            transform: translate(0%, -50%);
-            color:#000000 ;
-            text-decoration: none;
-          }
-#next,#back{
-            padding: 170px 10px 170px 10px;
-            background-color: #65bec6;
-            transform: translate(0%, -50%);
-            color: #000000;
-            text-decoration: none;  
-        }
-        
-#back {
-  position: absolute;
-  top: 350px;
-  left: 0px;
-  font-size: 20px;
-  border-radius: 0px 15px 15px 0px;
-}
-#next {
-  position: absolute;
-  top: 350px;
-  right: 0px;
-  font-size: 20px;
-  border-radius: 15px 0px 0px 15px;
-}
-           a:hover{
-
-            background-color: #FEFBFC;
-          }
-          
-  @media only screen and (max-width: 600px) {
-#next2,#back2{
-   display: block;
-          }        
-
-#next,#back{
-        display: none;
-      }
-          }
-          a:hover {
-            background-color: #FEFBFC;
-          }
-      </style>
-<h1>Pick a Colour!🎨</h1>
-<h2>RGB!</h2>
-
-<input type="range" id="myRange1" max="255" onchange="changeColor()">
-<span id="Rr">127.5</span>
-<input type="range" id="myRange2" max="255" onchange="changeColor()">
-<span id="Gg">127.5</span>
-<input type="range" id="myRange3" max="255" onchange="changeColor()">
-<span id="Bb">127.5</span>
-
-
-
-<div id="">
- <script type="text/javascript">                              
-
-    function changeColor() {
-        var x = document.getElementById("myRange1").value ;
-        var y = document.getElementById("myRange2").value ;
-        var z = document.getElementById("myRange3").value ;
-        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-        console.log(bgColor);
-        
-        document.getElementById("color").style.backgroundColor = bgColor;
-        document.getElementById("Rr").innerHTML = x;
-        document.getElementById("Gg").innerHTML = y;
-        document.getElementById("Bb").innerHTML = z;
-
-    }
-    function random_bg_color(){
-            var x = Math.floor(Math.random() * 256);
-            var y = Math.floor(Math.random() * 256);
-            var z = Math.floor(Math.random() * 256);
-            var bgColor = "rgb(" + x + "," + y + "," + z + ")"  
-            console.log(bgColor);
-            document.getElementById("clicks").style.backgroundColor = bgColor;  
+        const hexcode=["#FF0000", "#ff4000", "#ff8000", "#FFA500", "#FFFF00", "#fff49e","#bfff00","#00ff5e","#00ffbf", "#3c00ff", "#00c3ff", "#0000FF", "#6a00ff", "#A020F0", "#ea00ff", "#ff00bf", "#FFFFFF", "#000000","#ff0062","#FFFBE0","#ff0f33","#FFF5E0","#ba8fff","#9980ff","#ffe675","#5a00a3","#ff7aa4"];
+        let randomIndex=Math.floor(Math.random()*sports.length);
+            document.getElementById("randomSport").innerHTML =("value",sports[randomIndex]);
+             document.getElementById("randomSport").style.backgroundColor =("value",hexcode[randomIndex]);
+        function findSport(){
+            let randomIndex=Math.floor(Math.random()*sports.length);
+            document.getElementById("randomSport").innerHTML =("value",sports[randomIndex]);
+            document.getElementById("randomSport").style.backgroundColor =("value",hexcode[randomIndex]);
         }
     </script>
-</div>   
-<br><br><br>
-<button id="clicks" type="button" onClick="random_bg_color();playAudio();">Click Me!</button>   
+<a href="task64.html">Back</a>
+<a href="task66.html">Next</a>
 </body>
-
-
-<a id="back" href="task41.html">Back</a>  
- <a id="next" href="task43.html">Next</a> 
 </html>
