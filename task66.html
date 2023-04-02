@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Typing Speed Test Game | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #bd98f2;
+}
+::selection{
+  color: #fff;
+  background: #17A2B8;
+}
+.wrapper{
+  width: 770px;
+  padding: 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+.wrapper .input-field{
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+.wrapper .content-box{
+  padding: 13px 20px 0;
+  border-radius: 10px;
+  border: 1px solid #bfbfbf;
+}
+.content-box .typing-text{
+  overflow: hidden;
+  max-height: 256px;
+}
+.typing-text::-webkit-scrollbar{
+  width: 0;
+}
+.typing-text p{
+  font-size: 21px;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+.typing-text p span{
+  position: relative;
+}
+.typing-text p span.correct{
+  color: #56964f;
+}
+.typing-text p span.incorrect{
+  color: #cb3439;
+  outline: 1px solid #fff;
+  background: #ffc0cb;
+  border-radius: 4px;
+}
+.typing-text p span.active{
+  color: #17A2B8;
+}
+.typing-text p span.active::before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 5px;
+  background: #17A2B8;
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+  50%{ 
+    opacity: 1; 
+  }
+}
+.content-box .content{
+  margin-top: 17px;
+  display: flex;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #bfbfbf;
+}
+.content button{
+  outline: none;
+  border: none;
+  width: 105px;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #17A2B8;
+  transition: transform 0.3s ease;
+}
+.content button:active{
+  transform: scale(0.97);
+}
+.content .result-details{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: calc(100% - 140px);
+  justify-content: space-between;
+}
+.result-details li{
+  display: flex;
+  height: 20px;
+  list-style: none;
+  position: relative;
+  align-items: center;
+}
+.result-details li:not(:first-child){
+  padding-left: 22px;
+  border-left: 1px solid #bfbfbf;
+}
+.result-details li p{
+  font-size: 19px;
+}
+.result-details li span{
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
+}
+li span b{
+  font-weight: 500;
+}
+li:not(:first-child) span{
+  font-weight: 500;
+}
+@media (max-width: 745px) {
+  .wrapper{
+    padding: 20px;
+  }
+  .content-box .content{
+    padding: 20px 0;
+  }
+  .content-box .typing-text{
+    max-height: 100%;
+  }
+  .typing-text p{
+    font-size: 19px;
+    text-align: left;
+  }
+  .content button{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  .content .result-details{
+    width: 100%;
+  }
+  .result-details li:not(:first-child){
+    border-left: 0;
+    padding: 0;
+  }
+  .result-details li p, 
+  .result-details li span{
+    font-size: 17px;
+  }
+}
+@media (max-width: 518px) {
+  .wrapper .content-box{
+    padding: 10px 15px 0;
+  }
+  .typing-text p{
+    font-size: 18px;
+  }
+  .result-details li{
+    margin-bottom: 10px;
+  }
+  .content button{
+    margin-top: 10px;
+  }
+}
+</style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text" class="input-field">
+      <div class="content-box">
+        <div class="typing-text">
+          <p></p>
+        </div>
+        <div class="content">
+          <ul class="result-details">
+            <li class="time">
+              <p>Time Left:</p>
+              <span><b>60</b>s</span>
+            </li>
+            <li class="mistake">
+              <p>Mistakes:</p>
+              <span>0</span>
+            </li>
+            <li class="wpm">
+              <p>WPM:</p>
+              <span>0</span>
+            </li>
+            <li class="cpm">
+              <p>CPM:</p>
+              <span>0</span>
+            </li>
+          </ul>
+          <button>Try Again</button>
+        </div>
+      </div>
+    </div>
+    <script>const paragraphs = [
+    "Ove and Rune stood outside their houses, hands obstinately shoved into their trouser pockets, like ancient relics in a new age, while a parade of uppity real estate agents barely able to see over their grapefruit-size tie knots patrolled the little road between the houses and kept their eyes on them-like vultures watching aging water buffaloes. (Excerpt from A Man Called Ove by Fredrik Backman)",
+
+    "Open your eyes, concludes the man, and see what you can with them before they close forever, and then a piano comes on, playing a lonely song that sounds to Werner like a golden boat travelling a dark river, a progression of harmonies that transfigures Zollverin: the houses turned to mist, the mines filled in, the smokestacks fallen... (Excerpt from All The Light We Cannot See by Anthoney Doerr)",
+
+    "In glittering Shanghai, a monster awakens. Its eyes snap open in the belly of the Huangpu River, jaws unhinging at once to taste the foul blood seeping into the waters. Lines of red slither through the ancient city's modern streets: lines that draw webs in the cobblestones like a network of veins, and drip by drip these veins surge into the waters, pouring the city's life essence into the mouth of another. (Excerpt from These Violent Delights by Chloe Gong)",
+
+    "The girl with the dark hair walks down the wooden front stairs and lowers herself into the yellowing lagoon of ankle-high grass. A warm breeze ripples through the blades, leaves, and crablike petals of clover flowers. She studies the front yard, watching for the twitchy, mechanical motion and frantic jumps of grasshoppers. (Excerpt from The Cabin At The End Of The World by Paul G. Tremblay)",
+
+    "The music built a path, an ascent founded upon archways of colour. I followed it, walking out of that cell, through layers of earth, up and up-into fields of cornflowers, past a canopy of trees, and into the open expanse of sky. The pulse of the music was like hands that gently pushed me onwards, pulling me higher, guiding me through the clouds. (Excerpt from A Court Of Thorns and Roses by Sarah J. Maas)",
+
+    "She learned that undoing regrets was really a way of making wishes come true. There was almost any life she was living in one unierse, after all. In one life she had quite a solitary time in Paris, and taught English at a college in Montparnesse and cycled by the Seine and read lots of books on park benches. In another, she was a yoga teacher with the neck mobility of an owl. (Excerpt from The Midnight Library by Matt Haig)",
+
+    "Oxford took on a sinister air now that he was alone; the lights were no longer warm but eerie, stretching and warping his shadow against the cobblestones. The Bodleian was locked, but a night clerk noticed him waving at the window and let him in. He was, thankfully, one of the staff from before, and he let Robin into the west wing without question. (Excerpt from Babel: Or The Neccessity Of Violence by R. F. Kuang)",
+
+    "The servants called them malenchki, little ghosts, because they were the smallest and the youngest, and because they haunted the Duke's house like giggling phantoms, darting in and out of rooms, hiding in cupwoards to eavesdrop, sneaking into the kitchen to steal the last of the summer peaches. (Excerpt from Shadow and Bone by Leigh Bardugo)",
+
+    "The night was cold, chilling the sweat on his face, but the air was as sweet and crisp as the first bite of a fall apple. Above him was a half-moon and what seemed like a trillion stars.To match the trillion pebbles, just as mysterious, that we walk over everyday, he thought. Mystery above, mystery below. Weight, mass, reality: mystery all around. (Excerpt from Elevation by Stephen King)",
+
+    "Kaz stood with both gloved hands resting on the carved crow’s head of his cane. He looked totally at ease, his narrow face obscured by the brim of his hat. Most gang members in the Barrel loved flash: gaudy waistcoats, watch fobs studded with false gems, trousers in every print and pattern imaginable. (Excerpt from Six Of Crows by Leigh Bardugo)",
+];
+const typingText = document.querySelector(".typing-text p"),
+inpField = document.querySelector(".wrapper .input-field"),
+tryAgainBtn = document.querySelector(".content button"),
+timeTag = document.querySelector(".time span b"),
+mistakeTag = document.querySelector(".mistake span"),
+wpmTag = document.querySelector(".wpm span"),
+cpmTag = document.querySelector(".cpm span");
+let timer,
+maxTime = 60,
+timeLeft = maxTime,
+charIndex = mistakes = isTyping = 0;
+function loadParagraph() {
+    const ranIndex = Math.floor(Math.random() * paragraphs.length);
+    typingText.innerHTML = "";
+    paragraphs[ranIndex].split("").forEach(char => {
+        let span = `<span>${char}</span>`
+        typingText.innerHTML += span;
+    });
+    typingText.querySelectorAll("span")[0].classList.add("active");
+    document.addEventListener("keydown", () => inpField.focus());
+    typingText.addEventListener("click", () => inpField.focus());
+}
+function initTyping() {
+    let characters = typingText.querySelectorAll("span");
+    let typedChar = inpField.value.split("")[charIndex];
+    if(charIndex < characters.length - 1 && timeLeft > 0) {
+        if(!isTyping) {
+            timer = setInterval(initTimer, 1000);
+            isTyping = true;
+        }
+        if(typedChar == null) {
+            if(charIndex > 0) {
+                charIndex--;
+                if(characters[charIndex].classList.contains("incorrect")) {
+                    mistakes--;
+                }
+                characters[charIndex].classList.remove("correct", "incorrect");
+            }
+        } else {
+            if(characters[charIndex].innerText == typedChar) {
+                characters[charIndex].classList.add("correct");
+            } else {
+                mistakes++;
+                characters[charIndex].classList.add("incorrect");
+            }
+            charIndex++;
+        }
+        characters.forEach(span => span.classList.remove("active"));
+        characters[charIndex].classList.add("active");
+        let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+        wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+        
+        wpmTag.innerText = wpm;
+        mistakeTag.innerText = mistakes;
+        cpmTag.innerText = charIndex - mistakes;
+    } else {
+        clearInterval(timer);
+        inpField.value = "";
+    }   
+}
+function initTimer() {
+    if(timeLeft > 0) {
+        timeLeft--;
+        timeTag.innerText = timeLeft;
+        let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
+        wpmTag.innerText = wpm;
+    } else {
+        clearInterval(timer);
+    }
+}
+function resetGame() {
+    loadParagraph();
+    clearInterval(timer);
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inpField.value = "";
+    timeTag.innerText = timeLeft;
+    wpmTag.innerText = 0;
+    mistakeTag.innerText = 0;
+    cpmTag.innerText = 0;
+}
+loadParagraph();
+inpField.addEventListener("input", initTyping);
+tryAgainBtn.addEventListener("click", resetGame);</script>
+  
+  </body>
+</html>
