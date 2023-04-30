@@ -125,6 +125,33 @@ body{
     font-size: 16px;
   }
 }
+ #next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+  @media only screen and (max-width: 600px) {
+#next,#back{
+        display: none;
+      }  
   </style>
 </head>
 <body>
@@ -404,6 +431,7 @@ typingInput.addEventListener("input", initGame);
 inputs.addEventListener("click", () => typingInput.focus());
 document.addEventListener("keydown", () => typingInput.focus());
 </script>
-
+<a id="back" href="task66.html">Back</a>
+<a id="next" href="task68.html">Next</a>
 </body>
 </html>

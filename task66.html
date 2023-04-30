@@ -177,6 +177,29 @@ li:not(:first-child) span{
     font-size: 17px;
   }
 }
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+
 @media (max-width: 518px) {
   .wrapper .content-box{
     padding: 10px 15px 0;
@@ -328,6 +351,7 @@ function resetGame() {
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);</script>
-  
+  <a id="back" href="task65.html">Back</a>
+    <a id="next" href="task67.html">Next</a>
   </body>
 </html>
