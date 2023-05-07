@@ -20,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f6f7fb;
+  background: #fffbbf;
 }
 ::selection {
   color: #fff;
@@ -42,7 +42,7 @@ body {
 }
 @keyframes userShake {
   50% {
-    transform: rotate(10deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -52,22 +52,17 @@ body {
 }
 @keyframes cpuShake {
   50% {
-    transform: rotate(-10deg);
+    transform: rotate(-360deg);
   }
 }
 .result_images img {
   width: 100px;
 }
-.user_result img {
-  transform: rotate(90deg);
-}
-.cpu_result img {
-  transform: rotate(-90deg) rotateY(180deg);
-}
+
 .result {
   text-align: center;
   font-size: 2rem;
-  color: #7d2ae8;
+  color: #8cb5f7;
   margin-top: 1.5rem;
 }
 
@@ -101,11 +96,37 @@ body {
   pointer-events: none;
 }
 .option_image p {
-  color: #7d2ae8;
+  color: #8cb5f7;
   font-size: 1.235rem;
   margin-top: 1rem;
   pointer-events: none;
 }
+#next,#back{
+            padding: 170px 10px 170px 10px;
+            background-color: #a7dbef;
+            transform: translate(0%, -50%);
+            color: #000000;
+            text-decoration: none;  
+        }
+        
+#back {
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
+#next {
+  position: absolute;
+  top: 380px;
+  right: 0px;
+  font-size: 20px;
+  border-radius: 15px 0px 0px 15px;
+}
+@media only screen and (max-width: 600px) {
+#next,#back{
+        display: none;
+      }
 </style>
   </head>
   <body>
@@ -113,10 +134,10 @@ body {
       <div class="result_field">
         <div class="result_images">
           <span class="user_result">
-            <img src="Images/rock.png" alt="" />
+            <img src="Images/star.png" alt="" />
           </span>
           <span class="cpu_result">
-            <img src="Images/rock.png" alt="" />
+            <img src="Images/star.png" alt="" />
           </span>
         </div>
         <div class="result">Let's Play!!</div>
@@ -124,16 +145,16 @@ body {
 
       <div class="option_images">
         <span class="option_image">
-          <img src="Images/rock.png" alt="" />
-          <p>Rock</p>
+          <img src="Images/water.png" alt="" />
+          <p>Water</p>
         </span>
         <span class="option_image">
-          <img src="Images/paper.png" alt="" />
-          <p>Paper</p>
+          <img src="Images/grass.png" alt="" />
+          <p>Grass</p>
         </span>
         <span class="option_image">
-          <img src="Images/scissors.png" alt="" />
-          <p>Scissors</p>
+          <img src="Images/fire.png" alt="" />
+          <p>Fire</p>
         </span>
       </div>
     </section>
@@ -151,7 +172,7 @@ optionImages.forEach((image, index) => {
   image.addEventListener("click", (e) => {
     image.classList.add("active");
 
-    userResult.src = cpuResult.src = "Images/rock.png";
+    userResult.src = cpuResult.src = "Images/star.png";
     result.textContent = "Wait...";
 
     // Loop through each option image again
@@ -175,7 +196,7 @@ optionImages.forEach((image, index) => {
       // Generate a random number between 0 and 2
       let randomNumber = Math.floor(Math.random() * 3);
       // Create an array of CPU image options
-      let cpuImages = ["Images/rock.png", "Images/paper.png", "Images/scissors.png"];
+      let cpuImages = ["Images/water.png", "Images/grass.png", "Images/fire.png"];
       // Set the CPU image to a random option from the array
       cpuResult.src = cpuImages[randomNumber];
 
@@ -207,4 +228,6 @@ optionImages.forEach((image, index) => {
 });
    </script>
   </body>
+  <a id="back" href="task69.html">Back</a>
+<a id="next" href="task71.html">Next</a>
 </html>
