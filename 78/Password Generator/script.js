@@ -5,7 +5,7 @@ const passwordInput = document.querySelector(".password-box input"),
   generateButton = document.querySelector(".generate-button");
 
 //Characters of alphabet(a-z/A-Z), numbers(0-9) and Symbols($%&[]...)
-let allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^!$%&|[](){}:;.,*+-#@<>~";
+let allCharacters = "abv";
 
 //this function will be called on, page reload, generateButton clicked & rangeInput slide
 const generatePassword = () => {

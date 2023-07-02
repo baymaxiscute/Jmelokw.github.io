@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #927dfc;
+  background-color: #f9bbbf;
 }
 .wrapper {
   position: relative;
@@ -39,7 +39,7 @@ body {
   position: absolute;
   right: 15px;
   top: 50%;
-  color: #707070;
+  color: #ed8674;
   font-size: 20px;
   cursor: pointer;
   transform: translateY(-50%);
@@ -55,8 +55,9 @@ body {
 .range-box input {
   width: 100%;
   height: 5px;
-  accent-color: #826afb;
+  accent-color: #ed8674;
   cursor: pointer;
+  outline: none;
 }
 .range-box .slider-number {
   min-width: 30px;
@@ -70,7 +71,7 @@ body {
   color: #fff;
   padding: 12px 0;
   margin-top: 20px;
-  background: #927dfc;
+  background: #ed8674;
   border: none;
   border-radius: 8px;
   cursor: pointer;
