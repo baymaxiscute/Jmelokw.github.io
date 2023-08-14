@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&family=Righteous&display=swap" rel="stylesheet">
+<html>
+<head>
+<style>
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+h1{
+font-family: 'Righteous', cursive;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #f2df93;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #f2df93;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card1 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card1-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card1:hover .flip-card1-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card1-front, .flip-card1-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card1-front {
+  background-color: #bfd5fc;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card1-back {
+  background-color: #bfd5fc;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card2 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card2-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card2:hover .flip-card2-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card2-front, .flip-card2-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card2-front {
+  background-color: #ffa5a8;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card2-back {
+  background-color: #ffa5a8;
+  color: #ffa5a8;
+  transform: rotateY(180deg);
+}
+.flip-card3 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card3-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card3:hover .flip-card3-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card3-front, .flip-card3-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card3-front {
+  background-color: #fcd4a4;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card3-back {
+  background-color: #fcd4a4;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card4 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card4-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card4:hover .flip-card4-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card4-front, .flip-card4-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card4-front {
+  background-color: #fcf6b3;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card4-back {
+  background-color: #fcf6b3;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card6 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card6-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card6:hover .flip-card6-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card6-front, .flip-card6-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card6-front {
+  background-color: #afbfed;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card6-back {
+  background-color: #afbfed;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card5 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card5-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card5:hover .flip-card5-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card5-front, .flip-card5-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card5-front {
+  background-color: #fcf6b3;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card5-back {
+  background-color: #fcf6b3;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card7 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card7-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card7:hover .flip-card7-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card7-front, .flip-card7-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card7-front {
+  background-color: #ffd3c1;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card7-back {
+  background-color: #ffd3c1;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card8 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card8-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card8:hover .flip-card8-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card8-front, .flip-card8-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card8-front {
+  background-color: #e1c2fc;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card8-back {
+  background-color: #e1c2fc;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card9 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card9-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card9:hover .flip-card9-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card9-front, .flip-card9-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card9-front {
+  background-color: #c5ffaf;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card9-back {
+  background-color: #c5ffaf;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card10 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card10-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card10:hover .flip-card10-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card10-front, .flip-card10-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card10-front {
+  background-color: #eac6a1;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card10-back {
+  background-color: #eac6a1;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<h1>Nauru Basic Fact File</h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h2>National Dish:</h2>
+      <p>Coconut Crusted Fish</p>
+    </div>
+    <div class="flip-card-back">
+      <img src="https://img1.wsimg.com/isteam/ip/54df45e4-dabc-47fa-93b4-6fad1ac0fd0f/IMG_8103.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div>
+<div class="flip-card1">
+  <div class="flip-card1-inner">
+    <div class="flip-card1-front">
+     <h2>Estimated <br>Population Size:</h2>
+      <p>12, 792 (as of 13 August 2023)</p>
+    </div>
+    <div class="flip-card1-back">
+      <img src="https://img.freepik.com/premium-vector/rainbow-children-silhouette-white-background-vector_566661-13280.jpg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div>
+<div class="flip-card2">
+  <div class="flip-card2-inner">
+    <div class="flip-card2-front">
+     <h2>Official Capital:</h2>
+      <p>None</p>
+    </div>
+    <div class="flip-card2-back">
+    </div>
+  </div>
+</div>
+<div class="flip-card3">
+  <div class="flip-card3-inner">
+    <div class="flip-card3-front">
+     <h2>Unofficial Capital:</h2>
+      <p>Yaren</p>
+    </div>
+    <div class="flip-card3-back">
+      <img src="https://cdn.britannica.com/25/197225-050-317DAAD7/View-Anibare-Bay-Nauru.jpg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div>
+<div class="flip-card4">
+  <div class="flip-card4-inner">
+    <div class="flip-card4-front">
+     <h2>Official Language:</h2>
+      <p>Nauruan</p>
+    </div>
+    <div class="flip-card4-back">
+      <img src="https://img.freepik.com/premium-vector/boom-speech-bubble-banner-speech-bubble-poster-sticker-concept-memphis-geometric-style_324689-34.jpg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div>
+<div class="flip-card6">
+  <div class="flip-card6-inner">
+    <div class="flip-card6-front">
+     <h2>Year of <br>Independence:</h2>
+      <p>1968</p>
+    </div>
+    <div class="flip-card6-back">
+      <img src="https://media.istockphoto.com/id/181069943/photo/flag-of-nauru.jpg?s=612x612&w=0&k=20&c=AMoQXMtKf6aG52N-N1cATcuahZ_mGK6rkl-EWS3DvmA=" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+<div class="flip-card5">
+  <div class="flip-card5-inner">
+    <div class="flip-card5-front">
+     <h2>National Motto:</h2>
+      <p>God's Will First</p>
+    </div>
+    <div class="flip-card5-back">
+      <img src="https://www.bifikir.com/images/SOI/nauru-ulkeler_fj2r.webp" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+<div class="flip-card7">
+  <div class="flip-card7-inner">
+    <div class="flip-card7-front">
+     <h2>Currency:</h2>
+      <p>Australian Dollar</p>
+    </div>
+    <div class="flip-card7-back">
+      <img src="https://live-production.wcms.abc-cdn.net.au/7e09bfefee9a08d20852eac3a902cfbd?impolicy=wcms_crop_resize&cropH=1688&cropW=3000&xPos=0&yPos=60&width=862&height=485" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+<div class="flip-card8">
+  <div class="flip-card8-inner">
+    <div class="flip-card8-front">
+     <h2>Time Difference:</h2>
+      <p>UTC + 12</p>
+    </div>
+    <div class="flip-card8-back">
+      <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bm93fGVufDB8fDB8fHww&w=1000&q=80" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+<div class="flip-card9">
+  <div class="flip-card9-inner">
+    <div class="flip-card9-front">
+     <h2>National Animal:</h2>
+      <p>Great Frigatebird</p>
+    </div>
+    <div class="flip-card9-back">
+      <img src="https://animals.net/wp-content/uploads/2019/05/Frigate-Bird-1-650x425.jpg" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+<div class="flip-card10">
+  <div class="flip-card10-inner">
+    <div class="flip-card10-front">
+     <h2>Known For:</h2>
+      <p>Previous Phosphate Mining</p>
+    </div>
+    <div class="flip-card10-back">
+      <img src="https://i.guim.co.uk/img/media/c155e5abc0d999b84931f000fae97cc336e235d1/0_186_3425_2056/master/3425.jpg?width=700&quality=85&auto=format&fit=max&s=2ba9a4d279f8c643cc2efdcd50f7eab7" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div>
+</body>
+</html>
