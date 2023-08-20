@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&family=Righteous&display=swap" rel="stylesheet">
+<html>
+<head>
+<style>
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+h1{
+font-family: 'Righteous', cursive;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #f2df93;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #f2df93;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card1 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card1-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card1:hover .flip-card1-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card1-front, .flip-card1-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card1-front {
+  background-color: #bfd5fc;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card1-back {
+  background-color: #bfd5fc;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card2 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card2-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card2:hover .flip-card2-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card2-front, .flip-card2-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card2-front {
+  background-color: #ffa5a8;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card2-back {
+  background-color: #ffa5a8;
+  color: #ffa5a8;
+  transform: rotateY(180deg);
+}
+.flip-card3 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card3-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card3:hover .flip-card3-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card3-front, .flip-card3-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card3-front {
+  background-color: #fcd4a4;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card3-back {
+  background-color: #fcd4a4;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card4 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card4-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card4:hover .flip-card4-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card4-front, .flip-card4-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card4-front {
+  background-color: #fcf6b3;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card4-back {
+  background-color: #fcf6b3;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card6 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card6-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card6:hover .flip-card6-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card6-front, .flip-card6-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card6-front {
+  background-color: #afbfed;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card6-back {
+  background-color: #afbfed;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card5 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card5-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card5:hover .flip-card5-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card5-front, .flip-card5-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card5-front {
+  background-color: #fcf6b3;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card5-back {
+  background-color: #fcf6b3;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card7 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card7-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card7:hover .flip-card7-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card7-front, .flip-card7-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card7-front {
+  background-color: #ffd3c1;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card7-back {
+  background-color: #ffd3c1;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card8 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card8-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card8:hover .flip-card8-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card8-front, .flip-card8-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card8-front {
+  background-color: #e1c2fc;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card8-back {
+  background-color: #e1c2fc;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card9 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card9-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card9:hover .flip-card9-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card9-front, .flip-card9-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card9-front {
+  background-color: #c5ffaf;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card9-back {
+  background-color: #c5ffaf;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card10 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card10-inner {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card10:hover .flip-card10-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card10-front, .flip-card10-back {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card10-front {
+  background-color: #eac6a1;
+  color: black;
+  font-family: 'Kalam', cursive;
+}
+
+/* Style the back side */
+.flip-card10-back {
+  background-color: #eac6a1;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<h1>Kiribati Flashcard</h1>
+<table>
+  <tr>
+    <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <h2>Lobster</h2>
+    </div>
+    <div class="flip-card-back">
+      <img src="https://photo2.foodgawker.com/wp-content/uploads/2020/04/3588731.jpeg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div></th>
+    <th>
+<div class="flip-card1">
+  <div class="flip-card1-inner">
+    <div class="flip-card1-front">
+     <h2>Kiribati Pumpkin Coconut Soup</h2>
+    </div>
+    <div class="flip-card1-back">
+      <img src="https://travelfoodatlas.com/wp-content/uploads/2023/05/Kiribati-Pumpkin-Coconut-Soup.jpg.webp" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div></th>
+    <th>
+<div class="flip-card2">
+  <div class="flip-card2-inner">
+    <div class="flip-card2-front">
+     <h2>Te Bua Toro ni Baukin</h2>
+    </div>
+    <div class="flip-card2-back">
+       <img src="https://www.196flavors.com/wp-content/uploads/2012/12/Te-Bua-Toro-ni-Baukin-FP.jpg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div></th>
+  </tr>
+  <tr>
+    <td>
+<div class="flip-card3">
+  <div class="flip-card3-inner">
+    <div class="flip-card3-front">
+     <h2>Te Inai</h2>
+    </div>
+    <div class="flip-card3-back">
+      <img src="https://cdn.tasteatlas.com//images/dishes/536aa3877d07469fa6727d1dd1771648.jpg?width=320&height=205" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div></td>
+    <td>
+<div class="flip-card4">
+  <div class="flip-card4-inner">
+    <div class="flip-card4-front">
+     <h2>Bananas in Coconut Milk</h2>
+    </div>
+    <div class="flip-card4-back">
+      <img src="https://www.marionskitchen.com/wp-content/uploads/2018/07/Bananas-in-Coconut-Milk.jpg" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+  </div>
+</div></td>
+    <td>
+<div class="flip-card6">
+  <div class="flip-card6-inner">
+    <div class="flip-card6-front">
+     <h2>Ika Mata</h2>
+    </div>
+    <div class="flip-card6-back">
+      <img src="https://www.196flavors.com/wp-content/uploads/2019/05/ika-mata-4-FP.jpg" alt="Avatar" style="width:100%;height:100%;">
+    </div>
+  </div>
+</div></td>
+  </tr>
+ 
+  </tr>
+</table>
+
+</body>
+</html>
