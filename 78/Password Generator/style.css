@@ -57,7 +57,6 @@ body {
   height: 5px;
   accent-color: #ed8674;
   cursor: pointer;
-  outline: none;
 }
 .range-box .slider-number {
   min-width: 30px;
